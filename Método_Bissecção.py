@@ -20,9 +20,7 @@ def bissecção(g,x0,x1):
         print("\n")
         print("Iteração\t Ponto(x0)\t Ponto(x1)\t |g(m)|")
         while(abs(x1-x0)>erro):
-
-            m = (x0+x1)/2
-        
+            m = (x0+x1)/2        
             print("%d\t\t %.8f\t %.8f\t %.8f" %(var_count,x0,x1,abs(g(m),)))
             if(abs(x1-x0)<erro or abs(g(m))<erro):
                 break
