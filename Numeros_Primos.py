@@ -5,6 +5,8 @@ Created on Sat Sep 28 22:38:09 2019
 
 """
 
+# Lista de Números Primos
+
 numb = int(input("digite um número limite:"))
 
 odd_numb = []		#impares
