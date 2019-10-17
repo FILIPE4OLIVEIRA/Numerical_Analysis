@@ -22,15 +22,10 @@ def secante(g,x0,x1):
 		print("\n")
 		print("Iteração\t Ponto(x0)\t Ponto(x1)\t |g(x2)|")
 		while(var_count<maxint and abs(g(x2))>erro):
-
 			x2 = x1 - ((g(x1)*(x1-x0))/(g(x1)-g(x0)))
-
 			print("%d\t\t %.8f\t %.8f\t %.8f" %(var_count,x0,x1,abs(g(x2))))
-
 			x0 = x1
-
 			x1 = x2
-
 			var_count = var_count + 1
 		
 		if(var_count>maxint):
