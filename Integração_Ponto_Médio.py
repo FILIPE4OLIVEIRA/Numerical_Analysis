@@ -13,7 +13,7 @@ def g(x):
 
 	return(math.exp(-3*x)*math.sin(4*x))
 
-def ponto_médio(g,x0,x1):
+def ponto_medio(g,x0,x1):
 	numb_breaks = 1000
 	SOMA1 = 0
 	step = (x1-x0)/numb_breaks
