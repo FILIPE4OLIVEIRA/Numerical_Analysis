@@ -9,40 +9,25 @@ Created on Sun Oct 13 06:49:32 2019
 
 import math
 
-numb_breaks = 1000
-SOMA1 = 0
-SOMA2 = 0
-
-def function(x):
+def g(x):
 
 	return(math.exp(-3*x)*math.sin(4*x))
 
-def intervalos():
-	limites = []
-	print("digite o intervalo de busca [x0,x1]:")
-	for x in range(0,2):
-		if(x == 0):
-			y = float(input("digite o limite esquerdo x0: "))
-			limites.append(y)
-		else:
-			y = float(input("digite o limite direito x1: "))
-			limites.append(y)
+def simpson(g,x0,x1):
+	numb_breaks = 1000
+	SOMA1 = 0
+	SOMA2 = 0
+	step = (x1-x0)/numb_breaks
 
-	return(limites)
+	for x in range(1,int((numb_breaks/2)-1)):
 
-I = intervalos()
+		SOMA1 += 2*g(x0 + 2*x*step)
 
-step = (I[1]- I[0])/numb_breaks
+	for x in range(1,int((numb_breaks/2))):
 
-for x in range(1,int((numb_breaks/2)-1)):
+		SOMA2 += 4*g(x0 + 2*(x-1)*step)
 
-	SOMA1 += 2*function(I[0] + 2*x*step)
+	Integral = float((step/3)*(g(x0) + SOMA1 + SOMA2 + g(x1)))
 
-for x in range(1,int((numb_breaks/2))):
-
-	SOMA2 += 4*function(I[0] + 2*(x-1)*step)
-
-Integral = float((step/3)*(function(I[0]) + SOMA1 + SOMA2 + function(I[1])))
-
-print("\n")
-print("A Integral Aproximada da Função é:%.8f" %(Integral))
+	print("\n")
+	return(print("\tA Integral Aproximada da Função é:%.8f" %(Integral)))
