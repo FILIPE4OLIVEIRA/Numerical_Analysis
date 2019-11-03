@@ -7,21 +7,23 @@ Created on Mon Sep 30 22:16:09 2019
 
 # Método Numérico de Newton
 
-import math
+import numpy
+import matplotlib.pyplot as plt
 
 def G(x):
 
-    return(math.exp(-3*x)*math.sin(4*x))
+    return(numpy.exp(-3*x)*numpy.sin(4*x))
 
 def g(x):
     
-    return(math.exp(-3*x)*(4*math.cos(4*x)-3*math.sin(4*x)))
+    return(numpy.exp(-3*x)*(4*numpy.cos(4*x)-3*numpy.sin(4*x)))
  
 def newton(G,g,x0):
     erro = 0.0000001
     maxint = 100
     var_count = 1
-
+    
+    #Método Numérico de Newton   
     if(abs(G(x0))<erro):
         print("\n")
         print("A raiz aproximada da função é: %.8f"%(x0))
@@ -39,3 +41,14 @@ def newton(G,g,x0):
         else:
             print("\n")
             print("A raiz aproximada da função é: %.8f" %(x0))
+    
+    #Plotagem do Gráfico de G(x)
+    x = numpy.linspace(0.95*x0,1.15*x0)
+
+    plt.title('Gráfico de g(x)')
+    plt.xlabel('EIXO X')
+    plt.ylabel('EIXO Y')
+    plt.plot(x,G(x))
+    plt.fill_between(x,G(x))
+    plt.grid()
+    plt.show()
