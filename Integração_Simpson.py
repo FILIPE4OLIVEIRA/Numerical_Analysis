@@ -7,11 +7,12 @@ Created on Sun Oct 13 06:49:32 2019
 
 # Regra de Simpson Composta
 
-import math
+import numpy
+import matplotlib.pyplot as plt
 
 def g(x):
 
-	return(math.exp(-3*x)*math.sin(4*x))
+	return(numpy.exp(-3*x)*numpy.sin(4*x))
 
 def simpson(g,x0,x1):
 	numb_breaks = 1000
@@ -29,5 +30,17 @@ def simpson(g,x0,x1):
 
 	Integral = float((step/3)*(g(x0) + SOMA1 + SOMA2 + g(x1)))
 
+	
+    #Plotagem do Gráfico de G(x)
+	x = numpy.linspace(x0,x1)
+
+	plt.title('Gráfico de g(x)')
+	plt.xlabel('EIXO X')
+	plt.ylabel('EIXO Y')
+	plt.plot(x,g(x))
+	plt.fill_between(x,g(x))
+	plt.grid()
+	plt.show()
+	
 	print("\n")
 	return(print("\tA Integral Aproximada da Função é:%.8f" %(Integral)))
