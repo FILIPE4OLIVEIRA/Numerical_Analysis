@@ -7,14 +7,14 @@ Created on Thu Oct 17 06:14:52 2019
 
 # Integração de Monte Carlo
 
-import math
 import numpy
+import matplotlib.pyplot as plt
 
 def g(x):
 
-	return(math.exp(-3*x)*math.sin(4*x))
+	return(numpy.exp(-3*x)*numpy.sin(4*x))
 
-def monte_carlo(g,x0,x1):
+def integral_simples(g,x0,x1):
 	random_results = []
 	random_numb = 1000
 	var_count = 0
@@ -31,5 +31,18 @@ def monte_carlo(g,x0,x1):
 
 
 	Integral = float(numpy.mean(random_results))
+    
+    #Plotagem do Gráfico de G(x)
+	x = numpy.linspace(x0,x1)
+
+	plt.title('Gráfico de g(x)')
+	plt.xlabel('EIXO X')
+	plt.ylabel('EIXO Y')
+	plt.plot(x,g(x))
+	plt.fill_between(x,g(x))
+	plt.grid()
+	plt.show()
+	
 	print("\n")
+
 	return(print("\tA Integral Aproximada da Função é:%.8f" %(Integral)))
