@@ -22,8 +22,8 @@ def integral_simples(g,x0,x1):
 	while(var_count<100):
 		SOMA1 = 0
 		for x in range(random_numb):
-
-			SOMA1 += g(x0+(x1-x0)*numpy.random.uniform(0,1,1))
+			X = x0+(x1-x0)*numpy.random.uniform(0,1,1)
+			SOMA1 += g(X)
 	
 		random_approximation = float(((x1-x0)/random_numb)*SOMA1)
 		random_results.append(random_approximation)
