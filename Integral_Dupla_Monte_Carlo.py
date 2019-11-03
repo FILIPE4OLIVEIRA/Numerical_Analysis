@@ -19,7 +19,7 @@ def g(x,y):
 def integral_dupla(g,x0,x1,y0,y1):
 	random_results = []
 	random_approximation = []
-	random_numb = 100
+	random_numb = 1000
 	var_count = 0
 
 	while(var_count<100):
