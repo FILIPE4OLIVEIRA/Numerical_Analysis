@@ -14,21 +14,23 @@ from matplotlib.pyplot import cm
 
 def g(x,y):
 
-	return(numpy.exp(-3*x*y)*numpy.sin(4*x*y))
+	return(x**2 + y**2 + 4)
 
 def integral_dupla(g,x0,x1,y0,y1):
 	random_results = []
-	random_numb = 1000
+	random_approximation = []
+	random_numb = 100
 	var_count = 0
 
 	while(var_count<100):
-		SOMA1 = 0
-		for x in range(random_numb):
-
-			SOMA1 += g(x0+(x1-x0)*numpy.random.uniform(0,1,1),y0+(y1-y0)*numpy.random.uniform(0,1,1))
+		Z = 0
+		for i in range(random_numb):
+			X = x0+(x1-x0)*numpy.random.uniform(0,1,1)
+			Y = y0+(y1-y0)*numpy.random.uniform(0,1,1)
+			Z = g(X,Y)
+			random_approximation.append(Z)
 	
-		random_approximation = float((1/random_numb)*SOMA1)
-		random_results.append(random_approximation)
+		random_results.append(numpy.mean(random_approximation))
 		var_count = var_count + 1
 
 
@@ -54,6 +56,7 @@ def integral_dupla(g,x0,x1,y0,y1):
 	graph2 = figura2.add_subplot(111)
 	graph2.contourf(x,y,z,cmap=cm.viridis)
 
+	plt.title('Gráfico de g(x,y)')
 	graph2.set_xlabel('EIXO X')
 	graph2.set_ylabel('EIXO Y')
 	
