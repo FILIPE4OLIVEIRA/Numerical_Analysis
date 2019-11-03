@@ -7,15 +7,29 @@ Created on Sat Sep 28 19:46:18 2019
 
 # Método Numérico da Bissecção
 
-import math
+import numpy
+import matplotlib.pyplot as plt
 
 def g(x):
 
-    return(math.exp(-3*x)*math.sin(4*x))
+    return(numpy.exp(-3*x)*numpy.sin(4*x))
 
 def bissecção(g,x0,x1):
     erro = 0.0000001
     var_count = 1
+
+    #Plotagem do Gráfico de G(x)
+    x = numpy.linspace(x0,x1)
+
+    plt.title('Gráfico de g(x)')
+    plt.xlabel('EIXO X')
+    plt.ylabel('EIXO Y')
+    plt.plot(x,g(x))
+    plt.fill_between(x,g(x))
+    plt.grid()
+    plt.show()
+    
+    #Método Numérico da Bissecção
     if(g(x0)*g(x1)<0):
         print("\n")
         print("Iteração\t Ponto(x0)\t Ponto(x1)\t |g(m)|")
