@@ -10,7 +10,7 @@ Created on Sat Nov  2 20:22:38 2019
 import numpy
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-from matplotlib.pyplot import cm
+from matplotlib import ticker, cm
 
 def g(x,y):
 
@@ -19,7 +19,7 @@ def g(x,y):
 def integral_dupla(g,x0,x1,y0,y1):
 	random_results = []
 	random_approximation = []
-	random_numb = 1000
+	random_numb = 100
 	var_count = 0
 
 	while(var_count<100):
@@ -55,6 +55,7 @@ def integral_dupla(g,x0,x1,y0,y1):
 	figura2 = plt.figure()
 	graph2 = figura2.add_subplot(111)
 	graph2.contourf(x,y,z,cmap=cm.viridis)
+	figura2.colorbar(graph2.contourf(x,y,z,cmap=cm.viridis))
 
 	plt.title('Gráfico de G(x,y)')
 	graph2.set_xlabel('EIXO X')
