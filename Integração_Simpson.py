@@ -5,7 +5,7 @@ Created on Sun Oct 13 06:49:32 2019
 
 """
 
-# Regra de Simpson Composta
+# Regra de (1/3) Simpson Composta
 
 import numpy
 import matplotlib.pyplot as plt
@@ -31,7 +31,7 @@ def simpson(g,x0,x1):
 	Integral = float((step/3)*(g(x0) + SOMA1 + SOMA2 + g(x1)))
 
 	
-    #Plotagem do Gráfico de G(x)
+    	#Plotagem do Gráfico de G(x)
 	x = numpy.linspace(x0,x1)
 
 	plt.title('Gráfico de g(x)')
