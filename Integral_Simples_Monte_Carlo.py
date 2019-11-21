@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 def g(x):
 
-	return(numpy.exp(-3*x)*numpy.sin(4*x))
+	return(1/2 + x*numpy.exp(-x**2))
 
 def integral_simples(g,x0,x1):
 	random_results = []
