@@ -37,7 +37,7 @@ def integral_simples(g,x0,x1):
 
 	#Plotagem do Gráfico 1
 	plt.figure(1)
-	plt.title('Gráfico de G(x)')
+	plt.title('Gráfico de Área: G(x)')
 	plt.xlabel('EIXO X')
 	plt.ylabel('EIXO Y')
 	plt.plot(x,g(x))
@@ -47,9 +47,9 @@ def integral_simples(g,x0,x1):
 
 	#Plotagem do Gráfico 2
 	plt.figure(2)
-	plt.title('Distribuição da Integral')
+	plt.title('Distribuição Normal da Integral')
 	plt.hist(random_results, bins = 30, ec = 'black')
-	plt.xlabel('Valor da Integral')
+	plt.xlabel('Valor Médio da Integral')
 	plt.ylabel('Frequência')
 	plt.show()
     
