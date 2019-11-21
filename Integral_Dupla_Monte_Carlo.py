@@ -47,7 +47,7 @@ def integral_dupla(g,x0,x1,y0,y1):
 	figura1 = plt.figure(1)    
 	graph1 = Axes3D(figura1)
 	graph1.plot_surface(x, y, z, rstride=3, cstride=3, cmap=cm.viridis)
-	plt.title('Gráfico de G(x,y)')
+	plt.title('Gráfico de Superfície: G(x,y)')
 	graph1.set_xlabel('EIXO X')
 	graph1.set_ylabel('EIXO Y')
 	graph1.set_zlabel('EIXO Z')
@@ -57,15 +57,15 @@ def integral_dupla(g,x0,x1,y0,y1):
 	graph2 = figura2.add_subplot(111)
 	graph2.contourf(x,y,z,cmap=cm.viridis)
 	figura2.colorbar(graph2.contourf(x,y,z,cmap=cm.viridis))
-	plt.title('Gráfico de G(x,y)')
+	plt.title('Gráfico de Densidade: G(x,y)')
 	graph2.set_xlabel('EIXO X')
 	graph2.set_ylabel('EIXO Y')
 
 	#Plotagem do Gráfico 3
 	figura3 = plt.figure(3)
-	plt.title('Distribuição da Integral')
+	plt.title('Distribuição Normal da Integral')
 	plt.hist(random_results, bins = 30, ec = 'black')
-	plt.xlabel('Valor da Integral')
+	plt.xlabel('Valor Médio da Integral')
 	plt.ylabel('Frequência')
 
 	plt.show()
