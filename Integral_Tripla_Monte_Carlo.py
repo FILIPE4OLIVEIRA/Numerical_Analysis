@@ -14,7 +14,7 @@ from matplotlib import cm
 
 def g(x,y,z):
 
-	return(numpy.sqrt(x**2 + y**2 + z**2))
+	return(numpy.sin(x*y*z))
 
 def integral_tripla(g,x0,x1,y0,y1,z0,z1):
 	random_results = []
