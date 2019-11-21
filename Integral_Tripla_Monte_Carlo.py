@@ -45,7 +45,7 @@ def integral_tripla(g,x0,x1,y0,y1,z0,z1):
 
 	I = g(x,y,z)
     
-    #Plotagem do Gráfico 1
+    	#Plotagem do Gráfico 1
 	figura1 = plt.figure(1)    
 	graph1 = Axes3D(figura1)
 	graph1.plot_surface(x, y, I, rstride=3, cstride=3, cmap=cm.viridis)
