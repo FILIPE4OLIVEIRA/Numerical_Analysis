@@ -56,4 +56,4 @@ def integral_simples(g,x0,x1):
 	
 	print("\n")
 
-	return(print("\tA Integral Aproximada da Função é:%.8f" %(Integral)))
+	return(print("\tA Integral Aproximada da Função é: %.8f" %(Integral)))
