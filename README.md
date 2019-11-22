@@ -1,7 +1,7 @@
 # Numerical_Analysis
 Este é um repositório com métodos numéricos simples para iniciantes em programação Python e Cálculo Numérico.
 ## Números Primos:
-Estee código retorna a lista de números primos até um limite estabelicido pelo usuário.<br> 
+Este código retorna a lista de números primos até um limite estabelecido pelo usuário.<br> 
 Exemplo: Se o usuário deseja saber a lista de números primos até o 100 o código retorna<br>
 A lista de numeros primos é:<br>
 [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
