@@ -39,7 +39,7 @@ Iteração |Ponto(x0)    |Ponto(x1)    | Módulo g(m)
 19       |0.78539658   |0.78539848   |0.00000024
 20       |0.78539753   |0.78539848   |0.00000006
 
-![Bissecção](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_1_graph_g(x).png)<br>
+![Bissecção](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_1_graph_g(x).png)<br>
 **A raiz da função é: 0.78539801**<br><br>
 
 **Exemplo Método da Secante:**<br>
@@ -60,7 +60,7 @@ Iteração |Ponto(x0)  |Ponto(x1)  |Módulo g(x2)
 8        |0.78823032 |0.78554505 |0.00000048
 9        |0.78554505 |0.78539691 |0.00000000
 
-![Secante](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_1_graph_g(x).png)<br>
+![Secante](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_1_graph_g(x).png)<br>
 **A raiz aproximada da função é: 0.78539816**<br><br>
 
 **Exemplo Método de Newton:**<br>
@@ -77,7 +77,7 @@ Iteração |Ponto(x1)  |G(x1)
 4        |0.78539744 |0.00000027
 5        |0.78539816 |0.00000000
 
-![Newton](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_2_graph_g(x).png)<br>
+![Newton](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_2_graph_g(x).png)<br>
 **A raiz aproximada da função é: 0.78539816**<br><br>
 
 ## Métodos de Integração para Funções de uma variável:
@@ -88,7 +88,7 @@ Deseja-se saber o valor da integral ![Equação_4](https://latex.codecogs.com/gi
 Executa o código e chama-se a função **trapezio(g,-3,2)** no console.<br>
 
 **RESULTADO TRAPEZIO**<br>
-![Trapezio](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_3_graph_g(x).png)<br>
+![Trapezio](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_3_graph_g(x).png)<br>
 **A Integral Aproximada da Função é: 2.49090362**<br><br>
 
 **Exemplo Método do (1/3) Simpson Composto:**<br>
@@ -96,7 +96,7 @@ Deseja-se saber o valor da integral ![Equação_5](https://latex.codecogs.com/gi
 Executa o código e chama-se a função **simpson(g,-3,2)** no console.<br>
 
 **RESULTADO SIMPSON**<br>
-![Simpson](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_3_graph_g(x).png)<br>
+![Simpson](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_3_graph_g(x).png)<br>
 **A Integral Aproximada da Função é: 2.48540018**<br><br>
 
 **Exemplo Método do Ponto Médio:**<br>
@@ -104,7 +104,7 @@ Deseja-se saber o valor da integral ![Equação_6](https://latex.codecogs.com/gi
 Executa o código e chama-se a função **ponto_medio(g,-3,2)** no console.<br>
 
 **RESULTADO PONTO MÉDIO**<br>
-![Ponto_Médio](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_3_graph_g(x).png)<br>
+![Ponto_Médio](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_3_graph_g(x).png)<br>
 **A Integral Aproximada da Função é: 2.49108784**<br><br>
 
 ## Método Estocástico de Integração para Funções com multiplas variáveis:
@@ -116,8 +116,8 @@ Executa o código e chama-se a função **integral_simples(g,-3,2)**<br>
 Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
 **RESULTADO INTEGRAL ESTOCÁSTICA SIMPLES**<br>
-![Integral_Simples_1](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_1_Simples.png)<br>
-![Integral_Simples_2](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_2_Simples.png)<br>
+![Integral_Simples_1](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_1_Simples.png)<br>
+![Integral_Simples_2](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_2_Simples.png)<br>
 **A Integral Aproximada da Função é: 2.50935770**<br><br>
 
 **Exemplo Integral Dupla:**<br>
@@ -126,9 +126,9 @@ Executa o código e chama-se a função **integral_dupla(g,0,1,0,1)**<br>
 Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
 **RESULTADO INTEGRAL ESTOCÁSTICA DUPLA**<br>
-![Integral_Dupla_1](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_1_Dupla.png)<br>
-![Integral_Dupla_2](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_2_Dupla.png)<br>
-![Integral_Dupla_3](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_3_Dupla.png)<br>
+![Integral_Dupla_1](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_1_Dupla.png)<br>
+![Integral_Dupla_2](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_2_Dupla.png)<br>
+![Integral_Dupla_3](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_3_Dupla.png)<br>
 **A Integral Aproximada da Função é: 0.38769407**<br><br>
 
 **Exemplo Integral Tripla:**<br>
@@ -137,7 +137,7 @@ Executa o código e chama-se a função **integral_tripla(g,-2,2,-2,2,-0.2,0.3)*
 Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
 **RESULTADO INTEGRAL ESTOCÁSTICA TRIPLA**<br>
-![Integral_Tripla_1](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_1_Tripla.png)<br>
-![Integral_Tripla_2](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_2_Tripla.png)<br>
-![Integral_Tripla_2](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_3_Tripla.png)<br>
+![Integral_Tripla_1](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_1_Tripla.png)<br>
+![Integral_Tripla_2](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_2_Tripla.png)<br>
+![Integral_Tripla_2](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_3_Tripla.png)<br>
 **A Integral Aproximada da Função é: -0.00737981**<br><br>
