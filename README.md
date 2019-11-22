@@ -129,7 +129,7 @@ Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 ![Integral_Dupla_1](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_1_Dupla.png)<br>
 ![Integral_Dupla_2](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_2_Dupla.png)<br>
 ![Integral_Dupla_3](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_3_Dupla.png)<br>
-**A Integral Aproximada da Função é:0.38769407**<br><br>
+**A Integral Aproximada da Função é: 0.38769407**<br><br>
 
 **Exemplo Integral Tripla:**<br>
 Deseja-se calcular a Integral da função ![Equação_7](https://latex.codecogs.com/gif.latex?I%20%3D%20%5Cint_%7B0.2%7D%5E%7B0.3%7D%5Cint_%7B-2%7D%5E%7B2%7D%5Cint_%7B-2%7D%5E%7B2%7Dsin%28xyz%29dxdydz)<br>
