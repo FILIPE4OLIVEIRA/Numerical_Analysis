@@ -73,4 +73,4 @@ def integral_dupla(g,x0,x1,y0,y1):
 
 	#printe do resultado aproximado da função
 	print("\n")
-	return(print("\tA Integral Aproximada da Função é:%.8f" %(Integral)))
+	return(print("\tA Integral Aproximada da Função é: %.8f" %(Integral)))
