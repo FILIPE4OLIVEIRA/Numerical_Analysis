@@ -85,7 +85,7 @@ Os métodos a seguir realizam a integração de uma função g(x) em um interval
 
 **Exemplo Método do (1/2) Trapezio Composto:**<br>
 Deseja-se saber o valor da integral ![Equação_4](https://latex.codecogs.com/gif.latex?I%20%3D%20%5Cint_%7B-3%7D%5E%7B2%7D%20%281/2%29%20&plus;%20xe%5E%7B-x%5E2%7Ddx)<br>
-Executa o código e chama-se a função **trapezio(g,-3,2)** no console.<br>
+Executa o código e chama-se a função **trapezio(g,-3.0,2.0)** no console.<br>
 
 **RESULTADO TRAPEZIO**<br>
 ![Trapezio](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_3_graph_g(x).png)<br>
@@ -93,7 +93,7 @@ Executa o código e chama-se a função **trapezio(g,-3,2)** no console.<br>
 
 **Exemplo Método do (1/3) Simpson Composto:**<br>
 Deseja-se saber o valor da integral ![Equação_5](https://latex.codecogs.com/gif.latex?I%20%3D%20%5Cint_%7B-3%7D%5E%7B2%7D%20%281/2%29%20&plus;%20xe%5E%7B-x%5E2%7Ddx)<br>
-Executa o código e chama-se a função **simpson(g,-3,2)** no console.<br>
+Executa o código e chama-se a função **simpson(g,-3.0,2.0)** no console.<br>
 
 **RESULTADO SIMPSON**<br>
 ![Simpson](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_3_graph_g(x).png)<br>
@@ -101,7 +101,7 @@ Executa o código e chama-se a função **simpson(g,-3,2)** no console.<br>
 
 **Exemplo Método do Ponto Médio:**<br>
 Deseja-se saber o valor da integral ![Equação_6](https://latex.codecogs.com/gif.latex?I%20%3D%20%5Cint_%7B-3%7D%5E%7B2%7D%20%281/2%29%20&plus;%20xe%5E%7B-x%5E2%7Ddx)<br>
-Executa o código e chama-se a função **ponto_medio(g,-3,2)** no console.<br>
+Executa o código e chama-se a função **ponto_medio(g,-3.0,2.0)** no console.<br>
 
 **RESULTADO PONTO MÉDIO**<br>
 ![Ponto_Médio](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_3_graph_g(x).png)<br>
@@ -112,7 +112,7 @@ A seguir utiliza-se o método de Monte Carlo para realizar a Integração de fun
 
 **Exemplo Integral Simples:**<br>
 Deseja-se calcular a Integral ![Equação_7](https://latex.codecogs.com/gif.latex?I%20%3D%20%5Cint_%7B-3%7D%5E%7B2%7D%20%281/2%29%20&plus;%20xe%5E%7B-x%5E2%7Ddx)<br>
-Executa o código e chama-se a função **integral_simples(g,-3,2)**<br> 
+Executa o código e chama-se a função **integral_simples(g,-3.0,2.0)**<br> 
 Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
 **RESULTADO INTEGRAL ESTOCÁSTICA SIMPLES**<br>
@@ -122,7 +122,7 @@ Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
 **Exemplo Integral Dupla:**<br>
 Deseja-se calcular a Integral ![Equação_8](https://latex.codecogs.com/gif.latex?I%20%3D%20%5Cint_0%5E%7B1%7D%20%5Cint_0%5E%7B1%7D%20e%5E%7Bxy%7Dsin%28xy%29dxdy)<br>
-Executa o código e chama-se a função **integral_dupla(g,0,1,0,1)**<br> 
+Executa o código e chama-se a função **integral_dupla(g,0.0,1.0,0.0,1.0)**<br> 
 Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
 **RESULTADO INTEGRAL ESTOCÁSTICA DUPLA**<br>
@@ -132,12 +132,12 @@ Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 **A Integral Aproximada da Função é: 0.38769407**<br><br>
 
 **Exemplo Integral Tripla:**<br>
-Deseja-se calcular a Integral da função ![Equação_7](https://latex.codecogs.com/gif.latex?I%20%3D%20%5Cint_%7B0.2%7D%5E%7B0.3%7D%5Cint_%7B-2%7D%5E%7B2%7D%5Cint_%7B-2%7D%5E%7B2%7Dsin%28xyz%29dxdydz)<br>
-Executa o código e chama-se a função **integral_tripla(g,-2,2,-2,2,-0.2,0.3)**<br> 
+Deseja-se calcular a Integral da função ![Equação_7](https://latex.codecogs.com/gif.latex?I%20%3D%20%5Cint_%7B-0.2%7D%5E%7B0.3%7D%20%5Cint_%7B-2.0%7D%5E%7B2.0%7D%20%5Cint_%7B-2.0%7D%5E%7B2.0%7D%20sin%28xyz%29dxdydz)<br>
+Executa o código e chama-se a função **integral_tripla(g,-2.0,2.0,-2.0,2.0,-0.2,0.3)**<br> 
 Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
 **RESULTADO INTEGRAL ESTOCÁSTICA TRIPLA**<br>
 ![Integral_Tripla_1](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_1_Tripla.png)<br>
 ![Integral_Tripla_2](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_2_Tripla.png)<br>
 ![Integral_Tripla_2](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Figure_3_Tripla.png)<br>
-**A Integral Aproximada da Função é: -0.00737981**<br><br>
+**A Integral Aproximada da Função é: -0.00137981**<br><br>
