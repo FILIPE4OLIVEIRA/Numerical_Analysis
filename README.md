@@ -63,7 +63,22 @@ Iteração |Ponto(x0)  |Ponto(x1)  |Módulo g(x2)
 ![Secante](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_1_graph_g(x).png)<br>
 **A raiz aproximada da função é: 0.78539816**<br><br>
 
+**Exemplo Método de Newton:**<br>
+Deseja-se saber a raiz da função ![Equação_3](https://latex.codecogs.com/png.latex?G%28x%29%20%3D%20e%5E%7B-3x%7Dsin%284x%29) com um chute inicial igual a **0.5** neste método é necessário adicionar a função G'(x) = g(x)<br>
+Executa o código e chama-se a função **newton(G,g,0.5)** no console.<br>
 
+**RESULTADO NEWTON**
+
+Iteração |Ponto(x1)  |G(x1)
+---------|-----------|----------
+1        |0.70701233 |0.03698312
+2        |0.77221590 |0.00519687
+3        |0.78490800 |0.00018611
+4        |0.78539744 |0.00000027
+5        |0.78539816 |0.00000000
+
+![Newton](https://github.com/FILIPE4OLIVEIRA/Numerical_Analysis/blob/master/Figure_2_graph_g(x).png)<br>
+**A raiz aproximada da função é: 0.78539816**<br><br>
 
 ## Métodos de Integração para Funções de uma variável:
 Os métodos a seguir realizam a integração de uma função g(x) em um intervalo [x0,x1] qualquer.<br>
