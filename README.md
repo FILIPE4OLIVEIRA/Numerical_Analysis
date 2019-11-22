@@ -84,7 +84,7 @@ Iteração |Ponto(x1)  |G(x1)
 Os métodos a seguir realizam a integração de uma função g(x) em um intervalo [x0,x1] qualquer.<br>
 
 **Exemplo Método do (1/2) Trapezio Composto:**<br>
-Deseja-se saber o valor da integral da função  ![Equação_4](https://latex.codecogs.com/png.latex?g%28x%29%20%3D%20%281/2%29%20&plus;%20xe%5E%7B-x%5E2%7D)  no intervalo **[-3,2]**<br>
+Deseja-se saber o valor da integral ![Equação_4](https://latex.codecogs.com/gif.latex?I%20%3D%20%5Cint_%7B-3%7D%5E%7B2%7D%20%281/2%29%20&plus;%20xe%5E%7B-x%5E2%7Ddx)<br>
 Executa o código e chama-se a função **trapezio(g,-3,2)** no console.<br>
 
 **RESULTADO TRAPEZIO**<br>
@@ -92,7 +92,7 @@ Executa o código e chama-se a função **trapezio(g,-3,2)** no console.<br>
 **A Integral Aproximada da Função é: 2.49090362**<br><br>
 
 **Exemplo Método do (1/3) Simpson Composto:**<br>
-Deseja-se saber o valor da integral da função  ![Equação_5](https://latex.codecogs.com/png.latex?g%28x%29%20%3D%20%281/2%29%20&plus;%20xe%5E%7B-x%5E2%7D)  no intervalo **[-3,2]**<br>
+Deseja-se saber o valor da integral ![Equação_5](https://latex.codecogs.com/gif.latex?I%20%3D%20%5Cint_%7B-3%7D%5E%7B2%7D%20%281/2%29%20&plus;%20xe%5E%7B-x%5E2%7Ddx)<br>
 Executa o código e chama-se a função **simpson(g,-3,2)** no console.<br>
 
 **RESULTADO SIMPSON**<br>
@@ -100,7 +100,7 @@ Executa o código e chama-se a função **simpson(g,-3,2)** no console.<br>
 **A Integral Aproximada da Função é: 2.48540018**<br><br>
 
 **Exemplo Método do Ponto Médio:**<br>
-Deseja-se saber o valor da integral da função  ![Equação_6](https://latex.codecogs.com/png.latex?g%28x%29%20%3D%20%281/2%29%20&plus;%20xe%5E%7B-x%5E2%7D)  no intervalo **[-3,2]**<br>
+Deseja-se saber o valor da integral ![Equação_6](https://latex.codecogs.com/gif.latex?I%20%3D%20%5Cint_%7B-3%7D%5E%7B2%7D%20%281/2%29%20&plus;%20xe%5E%7B-x%5E2%7Ddx)<br>
 Executa o código e chama-se a função **ponto_medio(g,-3,2)** no console.<br>
 
 **RESULTADO PONTO MÉDIO**<br>
