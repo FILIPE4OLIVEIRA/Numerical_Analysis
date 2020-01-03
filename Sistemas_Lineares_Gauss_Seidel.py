@@ -5,7 +5,7 @@ Created on Wed Jan  1 20:30:37 2020
 
 """
 
-# Método de Gauss-Sidel para solução de Sistemas Lineares
+# Método de Gauss-Sidel para Sistemas Lineares
 
 import numpy
 
