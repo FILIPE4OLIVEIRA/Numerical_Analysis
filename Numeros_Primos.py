@@ -30,6 +30,6 @@ for x in odd_numb:  # Monta o vetor contendo todos os números com resto da divi
         if (x % y == 0):
             prime_numb.append(x)
 
-print("\n São %.f Números Primos" % (len(prime_numb)))
+print("\n São %.i Números Primos" % (len(prime_numb)))
 print("\n A lista de numeros primos é:")
 print(prime_numb)
