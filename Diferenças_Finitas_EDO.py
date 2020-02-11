@@ -35,7 +35,7 @@ def diff3(x,dx):
 
 def diff(x0,x1,diff1,diff2,diff3,g):
 
-    N = 10
+    N = 500
     dx = (x1-x0)/N 
 
     x = numpy.linspace(x0,x1,N)
