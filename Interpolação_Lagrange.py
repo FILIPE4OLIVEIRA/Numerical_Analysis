@@ -5,19 +5,22 @@ Created on Sun Jan 16 06:00:09 2020
 
 """
 
+# Este método interpola os dados apresentados no vetores x e y a partir do polinômio de lagrange.
+# também é possível calcular o valor da interpolação em um ponto usando a variável xp.
+
 # Interpolação de Lagrange
 
 import numpy
 import matplotlib.pyplot as plt
 
-x = [0,20,40,60,80,100]    			# DADOS EIXO X
+x = [0,20,40,60,80,100]    				# DADOS EIXO X
 y = [26.0,48.6,61.6,71.2,74.8,75.2]		# DADOS EIXO Y
 
-def lagrange_interpolation(x,y,xp):
+def Lagrange_Interpolation(x,y,xp):
 
 	N1 = len(x) - 1
 
-	X = numpy.linspace(x[0],x[-1],100)
+	X = numpy.linspace(x[0],x[-1],1000)
 	Y = []
 
 	# Interpolação para todos os pontos
@@ -42,6 +45,8 @@ def lagrange_interpolation(x,y,xp):
 
 		SOMA2 = SOMA2 + y[i]*P2
 
+	print("\n O valor da Interpolação no Ponto x = %.3f é  y = %.5f" %(xp,SOMA2))
+
 	# Plotagem dos Gráficos Observado vs Interpolação
 	plt.title('Gráfico: Observado vs Interpolação')
 	plt.xlabel('EIXO X')
@@ -51,6 +56,3 @@ def lagrange_interpolation(x,y,xp):
 	plt.legend()
 	plt.grid()
 	plt.show()
-	
-
-	return(print("O valor da Interpolação no Ponto x = %.f é  y = %.5f" %(xp,SOMA2)))
