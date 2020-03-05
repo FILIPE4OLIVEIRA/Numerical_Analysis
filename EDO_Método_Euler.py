@@ -5,6 +5,8 @@ Created on Wed Jan  1 18:49:35 2020
 
 """
 
+# Este método resolve o problema da EDO y' - 2xy = 0 ; y(1) = 1 
+
 # Método de Euler - EDO
 
 import numpy
@@ -13,10 +15,10 @@ import matplotlib.pyplot as plt
 # Função
 def g(x,y):
 
-	return (y*numpy.sqrt(x))
+	return (2*x*y)
 
 # Método de Euler
-def euler(g,x0,x1,y0):
+def Euler(g,x0,x1,y0):
 
 	numb_div = 100000
 	numb_int = (x1-x0)/numb_div
@@ -31,13 +33,14 @@ def euler(g,x0,x1,y0):
 		y_aprox.append(y1)
 		x_aprox.append(x1)
 
+	print("\n\t O Valor Aproximado da EDO no Ponto %.2f é: %.8f" %(x1,y_aprox[-1]))
+
 	# Plotagem do Gráfico 1
 	plt.figure(1)
-	plt.title('Gráfico da Função: G(x,y(x))')
+	plt.title('Gráfico da Solução: dy/dx - 2xy = 0  ; y(1) = 1')
 	plt.xlabel('EIXO X')
 	plt.ylabel('EIXO Y')
-	plt.plot(x_aprox,y_aprox)
+	plt.plot(x_aprox,y_aprox, label = 'Solução', color = 'blue', linestyle = 'dashed')
+	plt.legend()
 	plt.grid()
 	plt.show()
-
-	return(print("\n\t O Valor Aproximado da EDO no Ponto %.2f é: %.8f" %(x1,y_aprox[-1])))
