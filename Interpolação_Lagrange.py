@@ -13,12 +13,12 @@ Created on Sun Jan 16 06:00:09 2020
 import numpy
 import matplotlib.pyplot as plt
 
-x = [0,20,40,60,80,100]    				# DADOS EIXO X
+x = [0,20,40,60,80,100]    			# DADOS EIXO X
 y = [26.0,48.6,61.6,71.2,74.8,75.2]		# DADOS EIXO Y
 
-def Lagrange_Interpolation(x,y,xp):
+def Lagrange(x,y,xp):
 
-	N1 = len(x) - 1
+	N1 = len(x)
 
 	X = numpy.linspace(x[0],x[-1],1000)
 	Y = []
@@ -26,9 +26,9 @@ def Lagrange_Interpolation(x,y,xp):
 	# Interpolação para todos os pontos
 	for k in range(len(X)):
 		SOMA1  = 0
-		for i in range(N1+1):
+		for i in range(N1):
 			P1 = 1
-			for j in range(N1+1):
+			for j in range(N1):
 				if(j != i):
 					P1 = P1 * (X[k] - x[j])/(x[i] - x[j])
 
@@ -37,9 +37,9 @@ def Lagrange_Interpolation(x,y,xp):
 
 	# Interpolação para um único ponto xp qualquer
 	SOMA2  = 0
-	for i in range(N1+1):
+	for i in range(N1):
 		P2 = 1
-		for j in range(N1+1):
+		for j in range(N1):
 			if(j != i):
 				P2 = P2 * (xp - x[j])/(x[i] - x[j])
 
