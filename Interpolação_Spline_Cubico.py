@@ -5,7 +5,7 @@ Created on Sun Jan 16 06:00:09 2020
 
 """
 
-# Este Método faz a Interpolação do Dados Utilizando Splines Cúbico
+# Este método interpola os dados apresentados no vetores x e y a partir de splines cubicos
 # Também é possível calcular o valor da interpolação em um ponto usando a variável xp.
 
 # Interpolação Spline Cubico
@@ -13,8 +13,8 @@ Created on Sun Jan 16 06:00:09 2020
 import numpy
 import matplotlib.pyplot as plt
 
-x = [0,20,40,60,80,100]    				
-y = [26.0,48.6,61.6,71.2,74.8,75.2]		
+x = [0,20,40,60,80,100]    			# DADOS EIXO X
+y = [26.0,48.6,61.6,71.2,74.8,75.2]		# DADOS EIXO Y
 
 def Spline_Cubico(x,y,xp):
 
