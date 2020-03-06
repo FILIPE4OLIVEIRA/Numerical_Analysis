@@ -6,7 +6,7 @@ Created on Sun Jan 16 06:00:09 2020
 """
 
 # Este método interpola os dados apresentados no vetores x e y a partir do polinômio de lagrange.
-# também é possível calcular o valor da interpolação em um ponto usando a variável xp.
+# Também é possível calcular o valor da interpolação em um ponto usando a variável xp.
 
 # Interpolação de Lagrange
 
