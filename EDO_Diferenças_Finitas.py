@@ -95,7 +95,7 @@ def Diferenças_Finitas(x0,x1,P,Q,R,y0,y1):
     plt.title("Gráfico da EDO y'' - 8x³y' + 4sin(x)y = 50cos(x); y(1) = 1 ; y(2) = 1")
     plt.xlabel('EIXO X')
     plt.ylabel('EIXO Y')
-    plt.plot(X,solution, label = 'Solução Númerica', color = 'blue', linestyle = 'dashed')
+    plt.plot(X,solution, label = 'Solução', color = 'blue', linestyle = 'dashed')
     plt.legend()
     plt.grid()
     plt.show()
