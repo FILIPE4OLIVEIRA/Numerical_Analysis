@@ -37,7 +37,7 @@ def Euler(g,x0,x1,y0):
 
 	# Plotagem do Gráfico 1
 	plt.figure(1)
-	plt.title('Gráfico da Solução: dy/dx - 2xy = 0  ; y(1) = 1')
+	plt.title("Gráfico da EDO \n y' - 2xy = 0  ; y(1) = 1")
 	plt.xlabel('EIXO X')
 	plt.ylabel('EIXO Y')
 	plt.plot(x_aprox,y_aprox, label = 'Solução', color = 'blue', linestyle = 'dashed')
