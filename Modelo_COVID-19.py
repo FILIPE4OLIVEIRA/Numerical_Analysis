@@ -105,7 +105,7 @@ pyplot.gca().xaxis.set_major_formatter(date_format_cases)
 pyplot.gca().xaxis.set_major_locator(mdates.DayLocator(bymonthday=None, interval=2))
 
 for a,b in zip(new_time_data_cases,new_infec_dados):
-    if(b>new_infec_dados[round(len(new_infec_dados)/2)]):
+    if(b>new_infec_dados[round(len(new_infec_dados)/3)]):
         pyplot.text(a, b, str(b), ha = 'right', va = 'bottom', fontsize =  'large', rotation = -25)
 
 pyplot.legend(loc = 'upper left')
@@ -135,7 +135,7 @@ pyplot.gca().xaxis.set_major_formatter(date_format_mortes)
 pyplot.gca().xaxis.set_major_locator(mdates.DayLocator(bymonthday=None, interval=2))
 
 for c,d in zip(new_time_data_mortes,new_death_dados):
-    pyplot.text(c, d, str(d), ha = 'right', va = 'bottom', fontsize =  'large', rotation = -25)
+    pyplot.text(c, d, str(d), ha = 'right', va = 'bottom', fontsize =  'large', rotation = -35)
 
 pyplot.legend(loc = 'upper left')
 pyplot.grid()
@@ -220,8 +220,8 @@ pyplot.gca().xaxis.set_major_formatter(date_format_cases2)
 pyplot.gca().xaxis.set_major_locator(mdates.DayLocator(bymonthday=None, interval=2))
 
 for a,b in zip(new_time_data_cases,new_infec_dados):
-    if(b>new_infec_dados[round(len(new_infec_dados)/2)]):
-        pyplot.text(a, b, str(b), ha = 'right', va = 'bottom', fontsize =  'large', rotation = -25)
+    if(b>new_infec_dados[round(len(new_infec_dados)/3)]):
+        pyplot.text(a, b, str(b), ha = 'right', va = 'bottom', fontsize =  'large', rotation = -35)
 
 pyplot.legend(loc = 'upper left')
 pyplot.grid()
