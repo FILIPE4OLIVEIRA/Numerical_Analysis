@@ -35,14 +35,14 @@ death_dados = numpy.array(death).astype(int)
 def model_cases1(x,c1,c2):
     return(c1*numpy.exp(c2*x))
 
-popt,pcov = curve_fit(model_cases1,time_dados_cases,infec_dados)
+popt,pcov = curve_fit(model_cases1,time_dados_cases,infec_dados,p0 = [0.5,0.5])
 c1,c2 = popt
 print(popt)
 
 def model_mortes1(x,m1,m2):
     return(m1*numpy.exp(m2*x))
 
-popt,pcov = curve_fit(model_mortes1,time_dados_mortes,death_dados)
+popt,pcov = curve_fit(model_mortes1,time_dados_mortes,death_dados,p0 = [0.5,0.5])
 m1,m2 = popt
 print(popt)
 
@@ -104,9 +104,11 @@ date_format_cases = mdates.DateFormatter("%d-%b")
 pyplot.gca().xaxis.set_major_formatter(date_format_cases)
 pyplot.gca().xaxis.set_major_locator(mdates.DayLocator(bymonthday=None, interval=2))
 
+aux1 = 1
 for a,b in zip(new_time_data_cases,new_infec_dados):
-    if(b>new_infec_dados[round(len(new_infec_dados)/3)]):
+    if(aux1%2 != 0):
         pyplot.text(a, b, str(b), ha = 'right', va = 'bottom', fontsize =  'large', rotation = -25)
+    aux1 = aux1 + 1
 
 pyplot.legend(loc = 'upper left')
 pyplot.grid()
@@ -134,8 +136,11 @@ date_format_mortes = mdates.DateFormatter("%d-%b")
 pyplot.gca().xaxis.set_major_formatter(date_format_mortes)
 pyplot.gca().xaxis.set_major_locator(mdates.DayLocator(bymonthday=None, interval=2))
 
+aux2 = 1
 for c,d in zip(new_time_data_mortes,new_death_dados):
-    pyplot.text(c, d, str(d), ha = 'right', va = 'bottom', fontsize =  'large', rotation = -35)
+    if(aux2%3 != 0):
+        pyplot.text(c, d, str(d), ha = 'right', va = 'bottom', fontsize =  'large', rotation = -25)
+    aux2 = aux2 + 1
 
 pyplot.legend(loc = 'upper left')
 pyplot.grid()
@@ -150,14 +155,14 @@ pyplot.show()
 def model_cases2(x,c1,c2,c3):
     return(c1*numpy.exp(-c2*numpy.exp(-c3*x)))
 
-popt,pcov = curve_fit(model_cases2,time_dados_cases,infec_dados)
+popt,pcov = curve_fit(model_cases2,time_dados_cases,infec_dados,p0 = [0.5,0.5,0.5])
 c1,c2,c3 = popt
 print(popt)
 
 def model_mortes2(x,m1,m2,m3):
     return(m1*numpy.exp(-m2*numpy.exp(-m3*x)))
 
-popt,pcov = curve_fit(model_mortes2,time_dados_mortes,death_dados)
+popt,pcov = curve_fit(model_mortes2,time_dados_mortes,death_dados,p0 = [0.5,0.5,0.5])
 m1,m2,m3 = popt
 print(popt)
 
@@ -219,9 +224,11 @@ date_format_cases2 = mdates.DateFormatter("%d-%b")
 pyplot.gca().xaxis.set_major_formatter(date_format_cases2)
 pyplot.gca().xaxis.set_major_locator(mdates.DayLocator(bymonthday=None, interval=2))
 
+aux1 = 1
 for a,b in zip(new_time_data_cases,new_infec_dados):
-    if(b>new_infec_dados[round(len(new_infec_dados)/3)]):
-        pyplot.text(a, b, str(b), ha = 'right', va = 'bottom', fontsize =  'large', rotation = -35)
+    if(aux1%2 != 0):
+        pyplot.text(a, b, str(b), ha = 'right', va = 'bottom', fontsize =  'large', rotation = -25)
+    aux1 = aux1 + 1
 
 pyplot.legend(loc = 'upper left')
 pyplot.grid()
@@ -249,8 +256,11 @@ date_format_mortes2 = mdates.DateFormatter("%d-%b")
 pyplot.gca().xaxis.set_major_formatter(date_format_mortes2)
 pyplot.gca().xaxis.set_major_locator(mdates.DayLocator(bymonthday=None, interval=2))
 
+aux2 = 1
 for c,d in zip(new_time_data_mortes,new_death_dados):
-    pyplot.text(c, d, str(d), ha = 'right', va = 'bottom', fontsize =  'large', rotation = -25)
+    if(aux2%3 != 0):
+        pyplot.text(c, d, str(d), ha = 'right', va = 'bottom', fontsize =  'large', rotation = -25)
+    aux2 = aux2 + 1
 
 pyplot.legend(loc = 'upper left')
 pyplot.grid()
