@@ -7,11 +7,11 @@ Created on Abril Jan 06 21:27:18 2020
 
 import numpy
 import pandas
+import statistics
 import matplotlib.pyplot as pyplot
 import matplotlib.dates as mdates
 
 from datetime import date
-from fbprophet import Prophet
 from scipy.optimize import curve_fit
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import r2_score
@@ -130,6 +130,74 @@ new_death_dados2 = list(death_dados)
 new_infec_dados2.append(est_cases2.astype(int))
 new_death_dados2.append(est_mortes2.astype(int))
 
+def statistics_models(x):
+    
+    adjust_infec_cases1 = infec_cases1.copy()
+    adjust_infec_cases2 = infec_cases2.copy()
+    adjust_death_cases1 = death_cases1.copy()
+    adjust_death_cases2 = death_cases2.copy()
+    
+    adjust_infec_cases1.remove(adjust_infec_cases1[-1])
+    adjust_infec_cases2.remove(adjust_infec_cases2[-1])
+    adjust_death_cases1.remove(adjust_death_cases1[-1])
+    adjust_death_cases2.remove(adjust_death_cases2[-1])
+    
+    rmse_cases1  = mean_squared_error(infec_dados, adjust_infec_cases1, squared=False)
+    rmse_cases2  = mean_squared_error(infec_dados, adjust_infec_cases2, squared=False)
+    rmse_mortes1 = mean_squared_error(death_dados, adjust_death_cases1, squared=False)
+    rmse_mortes2 = mean_squared_error(death_dados, adjust_death_cases2, squared=False)
+
+    rC1 = r2_score(infec_dados, adjust_infec_cases1)
+    rC2 = r2_score(infec_dados, adjust_infec_cases2)
+    rM1 = r2_score(death_dados, adjust_death_cases1)
+    rM2 = r2_score(death_dados, adjust_death_cases2)
+    
+    if(x==1):
+        print(" RMSE_C1 = %.3f\tR²_C1 = %.4f\n RMSE_C2 = %.3f\tR²_C2 = %.4f" %(rmse_cases1,rC1,rmse_cases2,rC2))
+        print(" RMSE_M1 = %.3f\tR²_M1 = %.4f\n RMSE_M2 = %.3f\tR²_M2 = %.4f" %(rmse_mortes1,rM1,rmse_mortes2,rM2))
+    
+    rmse_cases = (rmse_cases1,rmse_cases2);
+    rmse_morte = (rmse_mortes1,rmse_mortes2);
+    
+    return(rmse_cases,rmse_morte)
+
+rmse_cases,rmse_morte = statistics_models(0); z_alpha = 1.96/2.0
+
+def prediction_interval():
+    uper_cases_model_1 = []; lown_cases_model_1 = []; uper_cases_model_2 = []; lown_cases_model_2 = []
+    uper_morte_model_1 = []; lown_morte_model_1 = []; uper_morte_model_2 = []; lown_morte_model_2 = []
+
+    for i in range((len(infec_cases1)-2),len(infec_cases1)):   
+        uper_cases_model_1.append(infec_cases1[i] + z_alpha*rmse_cases[0])
+        lown_cases_model_1.append(infec_cases1[i] - z_alpha*rmse_cases[0])
+        uper_cases_model_2.append(infec_cases2[i] + z_alpha*rmse_cases[1])
+        lown_cases_model_2.append(infec_cases2[i] - z_alpha*rmse_cases[1])
+
+    for i in range((len(death_cases1)-2),len(death_cases1)):   
+        uper_morte_model_1.append(death_cases1[i] + z_alpha*rmse_morte[0])
+        lown_morte_model_1.append(death_cases1[i] - z_alpha*rmse_morte[0])
+        uper_morte_model_2.append(death_cases2[i] + z_alpha*rmse_morte[1])
+        lown_morte_model_2.append(death_cases2[i] - z_alpha*rmse_morte[1]) 
+        
+    uper_cases_model_1[0] = infec[-1]
+    lown_cases_model_1[0] = infec[-1]
+    uper_cases_model_2[0] = infec[-1]
+    lown_cases_model_2[0] = infec[-1]
+
+    uper_morte_model_1[0] = death[-1]
+    lown_morte_model_1[0] = death[-1]
+    uper_morte_model_2[0] = death[-1]
+    lown_morte_model_2[0] = death[-1]
+    
+    interval_cases_model_1 = numpy.ceil((uper_cases_model_1,lown_cases_model_1)).astype(int)
+    interval_cases_model_2 = numpy.ceil((uper_cases_model_2,lown_cases_model_2)).astype(int)
+    interval_morte_model_1 = numpy.ceil((uper_morte_model_1,lown_morte_model_1)).astype(int)
+    interval_morte_model_2 = numpy.ceil((uper_morte_model_2,lown_morte_model_2)).astype(int)
+    
+    return(interval_cases_model_1,interval_cases_model_2,interval_morte_model_1,interval_morte_model_2)
+
+interval_cases_model_1,interval_cases_model_2,interval_morte_model_1,interval_morte_model_2 = prediction_interval()
+
 # GRÁFICOS  -------------------------------------------------------------------------------------------------------
 
 def graph_model_1():
@@ -148,6 +216,10 @@ def graph_model_1():
              marker = 'H', label = "Número de Casos Confirmados", color = "blue", linestyle = 'solid')
     pyplot.plot(time_data_cases1,infec_cases1, 
                 marker = 'H', label = "Modelo de Ajuste (Exponencial Pura)", color = "red", linestyle = 'dashed')
+    pyplot.fill_between(time_data_cases1[0][-2:], interval_cases_model_1[0], interval_cases_model_1[1], 
+                        alpha = 0.5, color = "blue")
+    pyplot.text(data_covid19["DATAS_CASES"][2],50200,{'Upper Bound':interval_cases_model_1[0][1]}, {'fontsize':15})
+    pyplot.text(data_covid19["DATAS_CASES"][2],45000,{'Lower Bound':interval_cases_model_1[1][1]}, {'fontsize':15})
 
     pyplot.gcf().autofmt_xdate()
     date_format_cases = mdates.DateFormatter("%d-%b")
@@ -180,6 +252,10 @@ def graph_model_1():
              marker = 'H', label = "Número de Mortes Confirmadas", color = "blue", linestyle = 'solid')
     pyplot.plot(time_data_mortes1,death_cases1, 
                 marker = 'H', label = "Modelo de Ajuste (Exponencial Pura)", color = "red", linestyle = 'dashed')
+    pyplot.fill_between(time_data_mortes1[0][-2:], interval_morte_model_1[0], interval_morte_model_1[1], 
+                        alpha = 0.5, color = "blue")
+    pyplot.text(data_covid19["DATAS_MORTES"][2],4500,{'Upper Bound':interval_morte_model_1[0][1]}, {'fontsize':15})
+    pyplot.text(data_covid19["DATAS_MORTES"][2],4000,{'Lower Bound':interval_morte_model_1[1][1]}, {'fontsize':15})
 
     pyplot.gcf().autofmt_xdate()
     date_format_mortes = mdates.DateFormatter("%d-%b")
@@ -214,6 +290,10 @@ def graph_model_2():
              marker = 'H', label = "Número de Casos Confirmados", color = "blue", linestyle = 'solid')
     pyplot.plot(time_data_cases2,infec_cases2, 
                 marker = 'H', label = "Modelo de Ajuste (Curva de Gompertz)", color = "red", linestyle = 'dashed')
+    pyplot.fill_between(time_data_cases2[0][-2:], interval_cases_model_2[0], interval_cases_model_2[1], 
+                        alpha = 0.5, color = "blue")
+    pyplot.text(data_covid19["DATAS_CASES"][2],50200,{'Upper Bound':interval_cases_model_2[0][1]}, {'fontsize':15})
+    pyplot.text(data_covid19["DATAS_CASES"][2],45000,{'Lower Bound':interval_cases_model_2[1][1]}, {'fontsize':15})
 
     pyplot.gcf().autofmt_xdate()
     date_format_cases2 = mdates.DateFormatter("%d-%b")
@@ -246,7 +326,11 @@ def graph_model_2():
              marker = 'H', label = "Número de Mortes Confirmadas", color = "blue", linestyle = 'solid')
     pyplot.plot(time_data_mortes2,death_cases2, 
                 marker = 'H', label = "Modelo de Ajuste (Curva de Gompertz)", color = "red", linestyle = 'dashed')
-
+    pyplot.fill_between(time_data_mortes2[0][-2:], interval_morte_model_2[0], interval_morte_model_1[1], 
+                        alpha = 0.5, color = "blue")
+    pyplot.text(data_covid19["DATAS_MORTES"][2],4500,{'Upper Bound':interval_morte_model_2[0][1]}, {'fontsize':15})
+    pyplot.text(data_covid19["DATAS_MORTES"][2],4000,{'Lower Bound':interval_morte_model_2[1][1]}, {'fontsize':15})
+    
     pyplot.gcf().autofmt_xdate()
     date_format_mortes2 = mdates.DateFormatter("%d-%b")
     pyplot.gca().xaxis.set_major_formatter(date_format_mortes2)
@@ -340,30 +424,5 @@ def graph_model(number):
     else:
         graph_model_3()
 
-def statistics():
-    
-    adjust_infec_cases1 = infec_cases1.copy()
-    adjust_infec_cases2 = infec_cases2.copy()
-    adjust_death_cases1 = death_cases1.copy()
-    adjust_death_cases2 = death_cases2.copy()
-    
-    adjust_infec_cases1.remove(adjust_infec_cases1[-1])
-    adjust_infec_cases2.remove(adjust_infec_cases2[-1])
-    adjust_death_cases1.remove(adjust_death_cases1[-1])
-    adjust_death_cases2.remove(adjust_death_cases2[-1])
-    
-    rmse_cases1  = mean_squared_error(infec_dados, adjust_infec_cases1, squared=False)
-    rmse_cases2  = mean_squared_error(infec_dados, adjust_infec_cases2, squared=False)
-    rmse_mortes1 = mean_squared_error(death_dados, adjust_death_cases1, squared=False)
-    rmse_mortes2 = mean_squared_error(death_dados, adjust_death_cases2, squared=False)
-
-    rC1 = r2_score(infec_dados, adjust_infec_cases1)
-    rC2 = r2_score(infec_dados, adjust_infec_cases2)
-    rM1 = r2_score(death_dados, adjust_death_cases1)
-    rM2 = r2_score(death_dados, adjust_death_cases2)
-
-    print("RMSE_C1 = %.3f\tR²_C1 = %.4f\nRMSE_C2 = %.3f\tR²_C2 = %.4f" %(rmse_cases1,rC1,rmse_cases2,rC2))
-    print("RMSE_M1 = %.3f\tR²_M1 = %.4f\nRMSE_M2 = %.3f\tR²_M2 = %.4f" %(rmse_mortes1,rM1,rmse_mortes2,rM2))
-
 graph_model(2)
-statistics()
+rmse_cases,rmse_morte = statistics_models(1)
