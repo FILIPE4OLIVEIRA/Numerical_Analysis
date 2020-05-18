@@ -39,13 +39,14 @@ def Bissecção(y,x0,x1):
         print("\n") 
         print("Não existe raiz nesse intervalo.")
 
-    #Plotagem do Gráfico de y(x)
+    #Plotagem do Gráfico de G(x)
     xt = numpy.linspace(0.80*m,1.20*m)
 
-    pyplot.title('Gráfico de g(x)')
+    pyplot.title('Gráfico de y(x)')
     pyplot.xlabel('EIXO X')
     pyplot.ylabel('EIXO Y')
-    pyplot.plot(xt,y(xt), color = "red")
+    pyplot.plot(xt,y(xt), color = "red", label = "y(x) = e^(-3x)sin(4x)")
     pyplot.fill_between(xt,y(xt), color = "gray")
+    pyplot.legend(loc = 'best')
     pyplot.grid()
     pyplot.show()
