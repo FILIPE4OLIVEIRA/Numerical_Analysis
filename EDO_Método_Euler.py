@@ -10,7 +10,7 @@ Created on Wed Jan  1 18:49:35 2020
 # Método de Euler - EDO
 
 import numpy
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as pyplot
 
 # Função
 def g(x,y):
@@ -18,7 +18,7 @@ def g(x,y):
 	return (2*x*y)
 
 # Método de Euler
-def Euler(g,x0,x1,y0):
+def Euler_Method(g,x0,x1,y0):
 
 	numb_div = 100000
 	numb_int = (x1-x0)/numb_div
@@ -36,11 +36,11 @@ def Euler(g,x0,x1,y0):
 	print("\n\t O Valor Aproximado da EDO no Ponto %.2f é: %.8f" %(x1,y_aprox[-1]))
 
 	# Plotagem do Gráfico 1
-	plt.figure(1)
-	plt.title("Gráfico da EDO \n y' - 2xy = 0  ; y(1) = 1")
-	plt.xlabel('EIXO X')
-	plt.ylabel('EIXO Y')
-	plt.plot(x_aprox,y_aprox, label = 'Solução', color = 'blue', linestyle = 'dashed')
-	plt.legend()
-	plt.grid()
-	plt.show()
+	pyplot.figure(1)
+	pyplot.title("Gráfico da Solução: dy/dx - 2xy = 0 com y(1) = 1")
+	pyplot.xlabel('EIXO X')
+	pyplot.ylabel('EIXO Y')
+	pyplot.plot(x_aprox,y_aprox, label = 'Solução', color = 'red', linestyle = 'dashed')
+	pyplot.legend()
+	pyplot.grid()
+	pyplot.show()
