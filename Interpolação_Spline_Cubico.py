@@ -11,10 +11,10 @@ Created on Sun Jan 16 06:00:09 2020
 # Interpolação Spline Cubico
 
 import numpy
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as pyplot
 
-x = [0,20,40,60,80,100]    			# DADOS EIXO X
-y = [26.0,48.6,61.6,71.2,74.8,75.2]		# DADOS EIXO Y
+x = [0.125,0.375,0.625,0.875,1.125,1.375,1.625]    	# DADOS EIXO X
+y = [0.264,0.840,1.361,1.612,1.366,0.716,0.079]		# DADOS EIXO Y
 
 def Spline_Cubico(x,y,xp):
 
@@ -88,7 +88,7 @@ def Spline_Cubico(x,y,xp):
 
 
 	# Cálculo do Parâmetros das Funções Parciais
-	for i in range(0,N1-1):
+	for i in range(N1-1):
 		beta[i] = (Hy[i]/Hx[i]) - (Hx[i]/3)*(C[i+1] + 2*C[i])
 		delta[i] = (C[i+1] - C[i])/(3*Hx[i])
 
@@ -111,11 +111,11 @@ def Spline_Cubico(x,y,xp):
 	Y = Intervalo
 	
 	# Plotagem dos Gráficos Observado vs Interpolação
-	plt.title('Gráfico: Observado vs Interpolação')
-	plt.xlabel('EIXO X')
-	plt.ylabel('EIXO Y')
-	plt.plot(x,y, label = 'Observado', color = 'blue', linestyle = 'solid')
-	plt.plot(X,Y, label = 'Interpolação', color = 'red', linestyle = 'dashed')
-	plt.legend()
-	plt.grid()
-	plt.show()
+	pyplot.title('Gráfico: Observado vs Interpolação')
+	pyplot.xlabel('EIXO X')
+	pyplot.ylabel('EIXO Y')
+	pyplot.plot(x,y, label = 'Observado', color = 'blue', linestyle = 'solid')
+	pyplot.plot(X,Y, label = 'Interpolação', color = 'red', linestyle = 'dashed')
+	pyplot.legend()
+	pyplot.grid()
+	pyplot.show()
