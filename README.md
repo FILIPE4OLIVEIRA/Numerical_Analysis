@@ -34,7 +34,7 @@ Iteração |Ponto(x0)    |Ponto(x1)    | Módulo g(m)
 19       |0.78539658   |0.78539848   |0.00000024
 20       |0.78539753   |0.78539848   |0.00000006
 
-![Bissecção](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_1_graph_g(x).png)<br>
+![Bissecção](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/graph_zero_g(x).png)<br>
 **A raiz da função é: 0.78539801**<br><br>
 
 **Exemplo Método da Secante:**<br>
@@ -55,7 +55,7 @@ Iteração |Ponto(x0)  |Ponto(x1)  |Módulo g(x2)
 8        |0.78823032 |0.78554505 |0.00000048
 9        |0.78554505 |0.78539691 |0.00000000
 
-![Secante](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_1_graph_g(x).png)<br>
+![Secante](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/graph_zero_g(x).png<br>
 **A raiz aproximada da função é: 0.78539816**<br><br>
 
 **Exemplo Método de Newton:**<br>
@@ -72,7 +72,7 @@ Iteração |Ponto(x1)  |G(x1)
 4        |0.78539744 |0.00000027
 5        |0.78539816 |0.00000000
 
-![Newton](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_1_graph_g(x).png)<br>
+![Newton](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/graph_zero_g(x).png)<br>
 **A raiz aproximada da função é: 0.78539816**<br><br>
 
 ## Métodos de Integração para Funções de uma variável:
