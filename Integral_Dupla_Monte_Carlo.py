@@ -8,7 +8,7 @@ Created on Sat Nov  2 20:22:38 2019
 # Integração de Monte Carlo
 
 import numpy
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as pyplot
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import cm
 
@@ -16,13 +16,13 @@ def g(x,y):
 
 	return(numpy.exp(x*y)*numpy.sin(x*y))
 
-def integral_dupla(g,x0,x1,y0,y1):
+def Integral_Dupla(g,x0,x1,y0,y1):
 	random_results = []
 	random_approximation = []
-	random_numb = 1000
+	random_numb = 100
 	var_count = 0
 
-	while(var_count<10000):
+	while(var_count<150):
 		SOMA1 = 0
 		for i in range(random_numb):
 			X = x0+(x1-x0)*numpy.random.uniform(0,1,1)
@@ -43,32 +43,32 @@ def integral_dupla(g,x0,x1,y0,y1):
 
 	z = g(x,y)
     
-    	#Plotagem do Gráfico 1
-	figura1 = plt.figure(1)    
+    #Plotagem do Gráfico 1
+	figura1 = pyplot.figure(1)    
 	graph1 = Axes3D(figura1)
-	graph1.plot_surface(x, y, z, rstride=3, cstride=3, cmap=cm.viridis)
-	plt.title('Gráfico de Superfície: G(x,y)')
+	graph1.plot_surface(x, y, z, rstride = 3, cstride = 3, cmap = cm.viridis)
+	pyplot.title('Gráfico de Superfície: G(x,y)')
 	graph1.set_xlabel('EIXO X')
 	graph1.set_ylabel('EIXO Y')
 	graph1.set_zlabel('EIXO Z')
 
 	#Plotagem do Gráfico 2
-	figura2 = plt.figure(2)
+	figura2 = pyplot.figure(2)
 	graph2 = figura2.add_subplot(111)
-	graph2.contourf(x,y,z,cmap=cm.viridis)
-	figura2.colorbar(graph2.contourf(x,y,z,cmap=cm.viridis))
-	plt.title('Gráfico de Densidade: G(x,y)')
+	graph2.contourf(x, y, z, cmap = cm.viridis)
+	figura2.colorbar(graph2.contourf(x, y, z, cmap = cm.viridis))
+	pyplot.title('Gráfico de Densidade: G(x,y)')
 	graph2.set_xlabel('EIXO X')
 	graph2.set_ylabel('EIXO Y')
 
 	#Plotagem do Gráfico 3
-	figura3 = plt.figure(3)
-	plt.title('Distribuição Normal da Integral')
-	plt.hist(random_results, bins = 30, ec = 'black')
-	plt.xlabel('Valor Médio da Integral')
-	plt.ylabel('Frequência')
+	figura3 = pyplot.figure(3)
+	pyplot.title('Distribuição Normal da Integral')
+	pyplot.hist(random_results, bins = 30, ec = 'black')
+	pyplot.xlabel('Valor Médio da Integral')
+	pyplot.ylabel('Frequência')
 
-	plt.show()
+	pyplot.show()
 
 
 	#printe do resultado aproximado da função
