@@ -1,12 +1,34 @@
 # Numerical_Analysis
 Este é um repositório com métodos numéricos simples para iniciantes em programação Python e Cálculo Numérico.
 
+## Métodos de Interpolação de Dados:
+
+### Exemplo Método de Lagrange:
+Deseja-se interpolar os dados contidos no vetores **x** e **y**.<br>
+x = [0,20,40,60,80,100]<br>
+y = [26.0,48.6,61.6,71.2,74.8,75.2]	<br>
+Executa o código e chama-se a função **Lagrange(x,y,xp)** em que o parâmetro xp é um ponto qualquer pertencente ao intervalo x.<br>
+Exemplo: **Lagrange(x,y,43.76)**<br>
+
+**RESULTADO INTERPOLAÇÃO DE LAGRANGE**
+![Interpolação_Lagrange](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Interpolação_Lagrange.png)
+
+### Exemplo Método de Spline Cúbico:
+Deseja-se interpolar os dados contidos no vetores **x** e **y**.<br>
+x = [0.125,0.375,0.625,0.875,1.125,1.375,1.625]<br>
+y = [0.264,0.840,1.361,1.612,1.366,0.716,0.079]<br>
+Executa o código e chama-se a função **Spline_Cubico(x,y,xp)** em que o parâmetro xp é um ponto qualquer pertencente ao intervalo x.<br>
+Exemplo: **Spline_Cubico(x,y,0.957)**<br>
+
+**RESULTADO INTERPOLAÇÃO DE LAGRANGE**
+![Interpolação_Spline_Cubico](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Interpolação_Spline_Cubico.png)
+
 ## Métodos para Raizes de Funções de uma variável:
 Os métodos a seguir retornam a raiz de uma função g(x) qualquer definida no início do código,
 o código necessita de mais dois argumentos x0 e x1 que definem o intervalo de busca pela raiz.<br>
 
-**Exemplo Método da Bissecção:**<br>
-Deseja-se saber a raiz da função e^{- 3 x} \sin{\left(4 x \right)} no intervalo **[0.5,1.0]**.<br>
+### Exemplo Método da Bissecção:<br>
+Deseja-se saber a raiz da função e^(-3x)sin(4x) no intervalo **[0.5,1.0]**.<br>
 Executa o código e chama-se a função **Bissecção(g,0.5,1.0)** no console.<br>
 
 **RESULTADO BISSECÇÃO**
@@ -34,11 +56,10 @@ Iteração |Ponto(x0)    |Ponto(x1)    | Módulo g(m)
 19       |0.78539658   |0.78539848   |0.00000024
 20       |0.78539753   |0.78539848   |0.00000006
 
-![Bissecção](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/graph_zero_g(x).png)<br>
 **A raiz da função é: 0.78539801**<br><br>
 
-**Exemplo Método da Secante:**<br>
-Deseja-se saber a raiz da função ![Equação_2](https://latex.codecogs.com/png.latex?g%28x%29%20%3D%20e%5E%7B-3x%7Dsin%284x%29) no intervalo **[0.5,1.0]**<br>
+### Exemplo Método da Secante:<br>
+Deseja-se saber a raiz da função e^(-3x)sin(4x) no intervalo **[0.5,1.0]**<br>
 Executa o código e chama-se a função **Secante(g,0.5,1.0)** no console.<br>
 
 **RESULTADO SECANTE**
@@ -55,11 +76,10 @@ Iteração |Ponto(x0)  |Ponto(x1)  |Módulo g(x2)
 8        |0.78823032 |0.78554505 |0.00000048
 9        |0.78554505 |0.78539691 |0.00000000
 
-![Secante](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/graph_zero_g(x).png)<br>
 **A raiz aproximada da função é: 0.78539816**<br><br>
 
-**Exemplo Método de Newton:**<br>
-Deseja-se saber a raiz da função ![Equação_3](https://latex.codecogs.com/png.latex?G%28x%29%20%3D%20e%5E%7B-3x%7Dsin%284x%29) com um chute inicial igual a **0.5** neste método é necessário adicionar a função G'(x) = g(x)<br>
+### Exemplo Método de Newton:<br>
+Deseja-se saber a raiz da função y(x) = e^(-3x)sin(4x) com um chute inicial igual a **0.5** neste método é necessário adicionar a função y'(x)<br>
 Executa o código e chama-se a função **Newton(y,dydx,0.5)** no console.<br>
 
 **RESULTADO NEWTON**
@@ -72,42 +92,44 @@ Iteração |Ponto(x1)  |G(x1)
 4        |0.78539744 |0.00000027
 5        |0.78539816 |0.00000000
 
-![Newton](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/graph_zero_g(x).png)<br>
 **A raiz aproximada da função é: 0.78539816**<br><br>
 
-## Métodos de Integração para Funções de uma variável:
+**Resultado Gráfico das Funções Bissecção, Secante e Newton.**
+![Zero_Funções](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/graph_zero_g(x).png)<br>
+
+## Métodos de Integração para Funções de uma Variável:
 Os métodos a seguir realizam a integração de uma função g(x) em um intervalo [x0,x1] qualquer.<br>
 
-**Exemplo Método do (1/2) Trapezio Composto:**<br>
-Deseja-se saber o valor da integral ![Equação_4](https://latex.codecogs.com/gif.latex?I%20%3D%20%5Cint_%7B-3%7D%5E%7B2%7D%20%281/2%29%20&plus;%20xe%5E%7B-x%5E2%7Ddx)<br>
-Executa o código e chama-se a função **trapezio(g,-3,2)** no console.<br>
+### Exemplo Método do (1/2) Trapezio Composto:<br>
+Deseja-se saber o valor da integral ∫(1/2+xe^(-x^2)dx no itervalo **[-2,2]**<br>
+Executa o código e chama-se a função **Trapezio(g,-2,2)** no console.<br>
 
 **RESULTADO TRAPEZIO**<br>
-![Trapezio](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_3_graph_g(x).png)<br>
-**A Integral Aproximada da Função é: 2.49090362**<br><br>
+![Trapezio](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Area_Function_Trapezio.png)<br>
+**A Integral Aproximada da Função é: 2.00000000**<br><br>
 
-**Exemplo Método do (1/3) Simpson Composto:**<br>
-Deseja-se saber o valor da integral ![Equação_5](https://latex.codecogs.com/gif.latex?I%20%3D%20%5Cint_%7B-3%7D%5E%7B2%7D%20%281/2%29%20&plus;%20xe%5E%7B-x%5E2%7Ddx)<br>
-Executa o código e chama-se a função **simpson(g,-3,2)** no console.<br>
+### Exemplo Método do (1/3) Simpson Composto:<br>
+Deseja-se saber o valor da integral ∫(1/2+xe^(-x^2)dx no itervalo **[-2,2]**<br>
+Executa o código e chama-se a função **Simpson(g,-2,2)** no console.<br>
 
 **RESULTADO SIMPSON**<br>
-![Simpson](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_3_graph_g(x).png)<br>
-**A Integral Aproximada da Função é: 2.48540018**<br><br>
+![Simpson](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Area_Function_Simpson.pngg)<br>
+**A Integral Aproximada da Função é: 1.99550328**<br><br>
 
-**Exemplo Método do Ponto Médio:**<br>
-Deseja-se saber o valor da integral ![Equação_6](https://latex.codecogs.com/gif.latex?I%20%3D%20%5Cint_%7B-3%7D%5E%7B2%7D%20%281/2%29%20&plus;%20xe%5E%7B-x%5E2%7Ddx)<br>
-Executa o código e chama-se a função **ponto_medio(g,-3,2)** no console.<br>
+### Exemplo Método do Ponto Médio:<br>
+Deseja-se saber o valor da integral ∫(1/2+xe^(-x^2)dx no itervalo **[-2,2]**<br>
+Executa o código e chama-se a função **Ponto_Medio(g,-2,2)** no console.<br>
 
 **RESULTADO PONTO MÉDIO**<br>
-![Ponto_Médio](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_3_graph_g(x).png)<br>
-**A Integral Aproximada da Função é: 2.49108784**<br><br>
+![Ponto_Médio](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Area_Function_Ponto_Medio.png)<br>
+**A Integral Aproximada da Função é: 2.00029305**<br><br>
 
-## Método Estocástico de Integração para Funções com multiplas variáveis:
+## Método Estocástico de Integração para Funções com Multiplas Variáveis:
 A seguir utiliza-se o método de Monte Carlo para realizar a Integração de funções com uma ou mais variáveis.
 
-**Exemplo Integral Simples:**<br>
-Deseja-se calcular a Integral ![Equação_7](https://latex.codecogs.com/gif.latex?I%20%3D%20%5Cint_%7B-3%7D%5E%7B2%7D%20%281/2%29%20&plus;%20xe%5E%7B-x%5E2%7Ddx)<br>
-Executa o código e chama-se a função **integral_simples(g,-3,2)**<br> 
+### Exemplo Integral Simples:<br>
+Deseja-se calcular a Integral ∫(1/2+xe^(-x^2)dx no itervalo **[-2,2]**<br>
+Executa o código e chama-se a função **Integral_Simples(g,-2,2)**<br> 
 Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
 **RESULTADO INTEGRAL ESTOCÁSTICA SIMPLES**<br>
@@ -115,9 +137,9 @@ Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 ![Integral_Simples_2](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_2_Simples.png)<br>
 **A Integral Aproximada da Função é: 2.50935770**<br><br>
 
-**Exemplo Integral Dupla:**<br>
-Deseja-se calcular a Integral ![Equação_8](https://latex.codecogs.com/gif.latex?I%20%3D%20%5Cint_0%5E%7B1%7D%20%5Cint_0%5E%7B1%7D%20e%5E%7Bxy%7Dsin%28xy%29dxdy)<br>
-Executa o código e chama-se a função **integral_dupla(g,0,1,0,1)**<br> 
+### Exemplo Integral Dupla:<br>
+Deseja-se calcular a Integral ∬e(^xy)sin⁡(xy)dxdy sobre a região **β = [0,1,0,1]**<br>
+Executa o código e chama-se a função **Integral_Dupla(g,0,1,0,1)**<br> 
 Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
 **RESULTADO INTEGRAL ESTOCÁSTICA DUPLA**<br>
@@ -126,8 +148,8 @@ Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 ![Integral_Dupla_3](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_3_Dupla.png)<br>
 **A Integral Aproximada da Função é: 0.38769407**<br><br>
 
-**Exemplo Integral Tripla:**<br>
-Deseja-se calcular a Integral da função ![Equação_7](https://latex.codecogs.com/gif.latex?I%20%3D%20%5Cint_%7B-0.2%7D%5E%7B0.3%7D%20%5Cint_%7B-2.0%7D%5E%7B2.0%7D%20%5Cint_%7B-2.0%7D%5E%7B2.0%7D%20sin%28xyz%29dxdydz)<br>
+### Exemplo Integral Tripla:<br>
+Deseja-se calcular a Integral da função ∭sin⁡(xyz)dxdydz **β = [-2,2,-2,2,-0.2,0.3]**<br>
 Executa o código e chama-se a função **integral_tripla(g,-2,2,-2,2,-0.2,0.3)**<br> 
 Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
@@ -136,3 +158,10 @@ Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 ![Integral_Tripla_2](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_2_Tripla.png)<br>
 ![Integral_Tripla_2](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_3_Tripla.png)<br>
 **A Integral Aproximada da Função é: -0.00137981**<br><br>
+
+## Métodos Númericos para Solução de EDOs
+
+### Método de Euler:
+
+
+
