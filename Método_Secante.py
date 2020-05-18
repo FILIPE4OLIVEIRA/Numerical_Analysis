@@ -8,27 +8,16 @@ Created on Sat Oct  5 20:46:37 2019
 # Método Numérico da Secante
 
 import numpy
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as pyplot
 
 def g(x):
 
 	return(numpy.exp(-3*x)*numpy.sin(4*x))
 
-def secante(g,x0,x1):
+def Secante(g,x0,x1):
 	erro = 0.0000001
 	maxint = 100
 	var_count = 1
-
-	#Plotagem do Gráfico de G(x)
-	x = numpy.linspace(x0,x1)
-
-	plt.title('Gráfico de g(x)')
-	plt.xlabel('EIXO X')
-	plt.ylabel('EIXO Y')
-	plt.plot(x,g(x))
-	plt.fill_between(x,g(x))
-	plt.grid()
-	plt.show()
 
 	#Método Numérico da Secante
 	if(g(x0)*g(x1)<0):
@@ -52,3 +41,14 @@ def secante(g,x0,x1):
 	else:
 		print("\n")
 		print("Não existe raiz nesse intervalo.")
+
+	#Plotagem do Gráfico de G(x)
+	xt = numpy.linspace(0.80*x2,1.20*x2)
+
+	pyplot.title('Gráfico de g(x)')
+	pyplot.xlabel('EIXO X')
+	pyplot.ylabel('EIXO Y')
+	pyplot.plot(xt,g(xt), color = "red")
+	pyplot.fill_between(xt,g(xt), color = "gray")
+	pyplot.grid()
+	pyplot.show()
