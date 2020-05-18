@@ -8,7 +8,7 @@ Created on Sat Sep 28 22:38:09 2019
 # Lista de Números Primos
 
 import numpy
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as pyplot
 import time
 
 class NumerosPrimos:
@@ -56,13 +56,13 @@ class NumerosPrimos:
         print("\n")
 
         # Plotagem do Gráfico dos Números Primos 
-        plt.title('Gráfico dos Números Primos')
-        plt.xlabel('EIXO X')
-        plt.ylabel('EIXO Y')
-        plt.plot(self.list, marker = 'H' , label = 'Números Primos', color = 'red', linestyle = 'dotted')
-        plt.legend(loc = 'best')
-        plt.grid()
-        plt.show()
+        pyplot.title('Gráfico dos Números Primos')
+        pyplot.xlabel('EIXO X')
+        pyplot.ylabel('EIXO Y')
+        pyplot.plot(self.list, marker = 'H' , label = 'Números Primos', color = 'red', linestyle = 'dotted')
+        pyplot.legend(loc = 'best')
+        pyplot.grid()
+        pyplot.show()
 
     def Teste_Primos(self):
 
