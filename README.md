@@ -6,7 +6,7 @@ Os métodos a seguir retornam a raiz de uma função g(x) qualquer definida no i
 o código necessita de mais dois argumentos x0 e x1 que definem o intervalo de busca pela raiz.<br>
 
 **Exemplo Método da Bissecção:**<br>
-Deseja-se saber a raiz da função 𝑒−3𝑥sin(4𝑥) no intervalo **[0.5,1.0]**.<br>
+Deseja-se saber a raiz da função \displaystyle e^{- 3 x} \sin{\left(4 x \right)} no intervalo **[0.5,1.0]**.<br>
 Executa o código e chama-se a função **Bissecção(g,0.5,1.0)** no console.<br>
 
 **RESULTADO BISSECÇÃO**
