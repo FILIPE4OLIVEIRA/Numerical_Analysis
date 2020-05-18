@@ -3,24 +3,24 @@ Este é um repositório com métodos numéricos simples para iniciantes em progr
 
 ## Métodos de Interpolação de Dados:
 
-### Exemplo Método de Lagrange:
+### Exemplo Método de Lagrange:<br>
 Deseja-se interpolar os dados contidos no vetores **x** e **y**.<br>
 x = [0,20,40,60,80,100]<br>
 y = [26.0,48.6,61.6,71.2,74.8,75.2]	<br>
 Executa o código e chama-se a função **Lagrange(x,y,xp)** em que o parâmetro xp é um ponto qualquer pertencente ao intervalo x.<br>
 Exemplo: **Lagrange(x,y,43.76)**<br>
 
-**RESULTADO INTERPOLAÇÃO DE LAGRANGE**
+**RESULTADO INTERPOLAÇÃO DE LAGRANGE**<br>
 ![Interpolação_Lagrange](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Interpolação_Lagrange.png)
 
-### Exemplo Método de Spline Cúbico:
+### Exemplo Método de Spline Cúbico:<br>
 Deseja-se interpolar os dados contidos no vetores **x** e **y**.<br>
 x = [0.125,0.375,0.625,0.875,1.125,1.375,1.625]<br>
 y = [0.264,0.840,1.361,1.612,1.366,0.716,0.079]<br>
 Executa o código e chama-se a função **Spline_Cubico(x,y,xp)** em que o parâmetro xp é um ponto qualquer pertencente ao intervalo x.<br>
 Exemplo: **Spline_Cubico(x,y,0.957)**<br>
 
-**RESULTADO INTERPOLAÇÃO DE LAGRANGE**
+**RESULTADO INTERPOLAÇÃO DE LAGRANGE**<br>
 ![Interpolação_Spline_Cubico](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Interpolação_Spline_Cubico.png)
 
 ## Métodos para Raizes de Funções de uma variável:
@@ -134,9 +134,9 @@ Executa o código e chama-se a função **Integral_Simples(g,-2,2)**<br>
 Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
 **RESULTADO INTEGRAL ESTOCÁSTICA SIMPLES**<br>
-![Integral_Simples_1](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_1_Simples.png)<br>
-![Integral_Simples_2](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_2_Simples.png)<br>
-**A Integral Aproximada da Função é: 2.50935770**<br><br>
+![Integral_Simples_1](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Area_Function_MonteCarlo.png)<br>
+![Integral_Simples_2](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Distribuição_Integral_Simples.png)<br>
+**A Integral Aproximada da Função é: 2.00577996**<br><br>
 
 ### Exemplo Integral Dupla:<br>
 Deseja-se calcular a Integral **∬e(^xy)sin⁡(xy)dxdy** sobre a região **β = [x0,x1,y0,y1]**<br>
@@ -162,7 +162,23 @@ Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
 ## Métodos Númericos para Solução de EDOs
 
-### Método de Euler:
+### Exemplo Método de Euler: <br>
+Este método resolve o problema da EDO y' - 2xy = 0 ; y(1) = 1  no intervalo **x = [0,2]**<br>
+Executa o código e chama-se a função **Euler_Method(g,0,2,1)**<br>
 
+**RESULTADO MÉTODO DE EULER**
+![EDO_Euler](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/EDO_Euler.png)<br>
 
+### Exemplo Método de Runge Kutta 4° Ordem: <br>
+Este método resolve o problema da EDO y' - 2xy = 0 ; y(1) = 1  no intervalo **x = [0,2]**<br>
+Executa o código e chama-se a função **Runge_Kutta_O4(g,0,2,1)**<br>
 
+**RESULTADO MÉTODO DE RUNGE KUTTA 4° ORDEM**
+![EDO_RK4](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/EDO_RK4.png)<br>
+
+### Exemplo Método de Diferenças Finitas: <br>
+Este método calcula a EDO  y" - 8x³y' + 4sin(x)y = 50cos(x)  para as condições de contorno y(1) = 1 ; y(2) = 1<br>
+Executa o código e chama-se a função **Diferenças_Finitas(1,2,P,Q,R,1,1)**<br>
+
+**RESULTADO MÉTODO DE DIFERENÇAS FINITAS**
+![EDO_Diferenças Finitas](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/EDO_Diferenças_Finitas.png)<br>
