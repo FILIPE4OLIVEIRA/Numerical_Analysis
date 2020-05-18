@@ -6,7 +6,7 @@ Os métodos a seguir retornam a raiz de uma função g(x) qualquer definida no i
 o código necessita de mais dois argumentos x0 e x1 que definem o intervalo de busca pela raiz.<br>
 
 **Exemplo Método da Bissecção:**<br>
-Deseja-se saber a raiz da função ![Equação_1](https://latex.codecogs.com/png.latex?g%28x%29%20%3D%20e%5E%7B-3x%7Dsin%284x%29) no intervalo **[0.5,1.0]**.<br>
+Deseja-se saber a raiz da função 𝑒−3𝑥sin(4𝑥) no intervalo **[0.5,1.0]**.<br>
 Executa o código e chama-se a função **Bissecção(g,0.5,1.0)** no console.<br>
 
 **RESULTADO BISSECÇÃO**
@@ -60,7 +60,7 @@ Iteração |Ponto(x0)  |Ponto(x1)  |Módulo g(x2)
 
 **Exemplo Método de Newton:**<br>
 Deseja-se saber a raiz da função ![Equação_3](https://latex.codecogs.com/png.latex?G%28x%29%20%3D%20e%5E%7B-3x%7Dsin%284x%29) com um chute inicial igual a **0.5** neste método é necessário adicionar a função G'(x) = g(x)<br>
-Executa o código e chama-se a função **newton(y,dydx,0.5)** no console.<br>
+Executa o código e chama-se a função **Newton(y,dydx,0.5)** no console.<br>
 
 **RESULTADO NEWTON**
 
