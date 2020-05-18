@@ -3,11 +3,11 @@ Este é um repositório com métodos numéricos simples para iniciantes em progr
 
 ## Métodos para Raizes de Funções de uma variável:
 Os métodos a seguir retornam a raiz de uma função g(x) qualquer definida no início do código,
-o código neceessita de mais dois argumentos x0 e x1 que definem o intervalo de busca pela raiz.<br>
+o código necessita de mais dois argumentos x0 e x1 que definem o intervalo de busca pela raiz.<br>
 
 **Exemplo Método da Bissecção:**<br>
 Deseja-se saber a raiz da função ![Equação_1](https://latex.codecogs.com/png.latex?g%28x%29%20%3D%20e%5E%7B-3x%7Dsin%284x%29) no intervalo **[0.5,1.0]**.<br>
-Executa o código e chama-se a função **bissecção(g,0.5,1.0)** no console.<br>
+Executa o código e chama-se a função **Bissecção(g,0.5,1.0)** no console.<br>
 
 **RESULTADO BISSECÇÃO**
 
@@ -39,7 +39,7 @@ Iteração |Ponto(x0)    |Ponto(x1)    | Módulo g(m)
 
 **Exemplo Método da Secante:**<br>
 Deseja-se saber a raiz da função ![Equação_2](https://latex.codecogs.com/png.latex?g%28x%29%20%3D%20e%5E%7B-3x%7Dsin%284x%29) no intervalo **[0.5,1.0]**<br>
-Executa o código e chama-se a função **secante(g,0.5,1.0)** no console.<br>
+Executa o código e chama-se a função **Secante(g,0.5,1.0)** no console.<br>
 
 **RESULTADO SECANTE**
 
@@ -60,7 +60,7 @@ Iteração |Ponto(x0)  |Ponto(x1)  |Módulo g(x2)
 
 **Exemplo Método de Newton:**<br>
 Deseja-se saber a raiz da função ![Equação_3](https://latex.codecogs.com/png.latex?G%28x%29%20%3D%20e%5E%7B-3x%7Dsin%284x%29) com um chute inicial igual a **0.5** neste método é necessário adicionar a função G'(x) = g(x)<br>
-Executa o código e chama-se a função **newton(G,g,0.5)** no console.<br>
+Executa o código e chama-se a função **newton(y,dydx,0.5)** no console.<br>
 
 **RESULTADO NEWTON**
 
@@ -72,7 +72,7 @@ Iteração |Ponto(x1)  |G(x1)
 4        |0.78539744 |0.00000027
 5        |0.78539816 |0.00000000
 
-![Newton](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_2_graph_g(x).png)<br>
+![Newton](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_1_graph_g(x).png)<br>
 **A raiz aproximada da função é: 0.78539816**<br><br>
 
 ## Métodos de Integração para Funções de uma variável:
