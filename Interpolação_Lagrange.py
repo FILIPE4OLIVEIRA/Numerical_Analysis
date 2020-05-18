@@ -11,7 +11,7 @@ Created on Sun Jan 16 06:00:09 2020
 # Interpolação de Lagrange
 
 import numpy
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as pyplot
 
 x = [0,20,40,60,80,100]    			# DADOS EIXO X
 y = [26.0,48.6,61.6,71.2,74.8,75.2]		# DADOS EIXO Y
@@ -48,11 +48,11 @@ def Lagrange(x,y,xp):
 	print("\n O valor da Interpolação no Ponto x = %.3f é  y = %.5f" %(xp,SOMA2))
 
 	# Plotagem dos Gráficos Observado vs Interpolação
-	plt.title('Gráfico: Observado vs Interpolação')
-	plt.xlabel('EIXO X')
-	plt.ylabel('EIXO Y')
-	plt.plot(x,y, label = 'Observado', color = 'blue', linestyle = 'solid')
-	plt.plot(X,Y, label = 'Interpolação', color = 'red', linestyle = 'dashed')
-	plt.legend()
-	plt.grid()
-	plt.show()
+	pyplot.title('Gráfico: Observado vs Interpolação')
+	pyplot.xlabel('EIXO X')
+	pyplot.ylabel('EIXO Y')
+	pyplot.plot(x,y, label = 'Observado', color = 'blue', linestyle = 'solid')
+	pyplot.plot(X,Y, label = 'Interpolação', color = 'red', linestyle = 'dashed')
+	pyplot.legend()
+	pyplot.grid()
+	pyplot.show()
