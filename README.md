@@ -24,11 +24,11 @@ Exemplo: **Spline_Cubico(x,y,0.957)**<br>
 ![Interpolação_Spline_Cubico](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Interpolação_Spline_Cubico.png)
 
 ## Métodos para Raizes de Funções de uma variável:
-Os métodos a seguir retornam a raiz de uma função g(x) qualquer definida no início do código,
+Os métodos a seguir retornam a raiz de uma função y(x) qualquer definida no início do código,
 o código necessita de mais dois argumentos x0 e x1 que definem o intervalo de busca pela raiz.<br>
 
 ### Exemplo Método da Bissecção:<br>
-Deseja-se saber a raiz da função e^(-3x)sin(4x) no intervalo **[0.5,1.0]**.<br>
+Deseja-se saber a raiz da função **y(x) = e^(-3x)sin(4x)** no intervalo **[0.5,1.0]**.<br>
 Executa o código e chama-se a função **Bissecção(g,0.5,1.0)** no console.<br>
 
 **RESULTADO BISSECÇÃO**
@@ -59,7 +59,7 @@ Iteração |Ponto(x0)    |Ponto(x1)    | Módulo g(m)
 **A raiz da função é: 0.78539801**<br><br>
 
 ### Exemplo Método da Secante:<br>
-Deseja-se saber a raiz da função e^(-3x)sin(4x) no intervalo **[0.5,1.0]**<br>
+Deseja-se saber a raiz da função **y(x) = e^(-3x)sin(4x)** no intervalo **[0.5,1.0]**<br>
 Executa o código e chama-se a função **Secante(g,0.5,1.0)** no console.<br>
 
 **RESULTADO SECANTE**
@@ -79,7 +79,8 @@ Iteração |Ponto(x0)  |Ponto(x1)  |Módulo g(x2)
 **A raiz aproximada da função é: 0.78539816**<br><br>
 
 ### Exemplo Método de Newton:<br>
-Deseja-se saber a raiz da função y(x) = e^(-3x)sin(4x) com um chute inicial igual a **0.5** neste método é necessário adicionar a função y'(x)<br>
+Deseja-se saber a raiz da função **y(x) = e^(-3x)sin(4x)** com um chute inicial igual a **0.5**,
+neste método é necessário adicionar a função **y'(x)**<br>
 Executa o código e chama-se a função **Newton(y,dydx,0.5)** no console.<br>
 
 **RESULTADO NEWTON**
@@ -101,7 +102,7 @@ Iteração |Ponto(x1)  |G(x1)
 Os métodos a seguir realizam a integração de uma função g(x) em um intervalo [x0,x1] qualquer.<br>
 
 ### Exemplo Método do (1/2) Trapezio Composto:<br>
-Deseja-se saber o valor da integral ∫(1/2+xe^(-x^2)dx no itervalo **[-2,2]**<br>
+Deseja-se saber o valor da integral **∫(1/2+xe^(-x^2)dx** no itervalo **[-2,2]**<br>
 Executa o código e chama-se a função **Trapezio(g,-2,2)** no console.<br>
 
 **RESULTADO TRAPEZIO**<br>
@@ -109,15 +110,15 @@ Executa o código e chama-se a função **Trapezio(g,-2,2)** no console.<br>
 **A Integral Aproximada da Função é: 2.00000000**<br><br>
 
 ### Exemplo Método do (1/3) Simpson Composto:<br>
-Deseja-se saber o valor da integral ∫(1/2+xe^(-x^2)dx no itervalo **[-2,2]**<br>
+Deseja-se saber o valor da integral **∫(1/2+xe^(-x^2)dx** no itervalo **[-2,2]**<br>
 Executa o código e chama-se a função **Simpson(g,-2,2)** no console.<br>
 
 **RESULTADO SIMPSON**<br>
-![Simpson](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Area_Function_Simpson.pngg)<br>
+![Simpson](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Area_Function_Simpson.png)<br>
 **A Integral Aproximada da Função é: 1.99550328**<br><br>
 
 ### Exemplo Método do Ponto Médio:<br>
-Deseja-se saber o valor da integral ∫(1/2+xe^(-x^2)dx no itervalo **[-2,2]**<br>
+Deseja-se saber o valor da integral **∫(1/2+xe^(-x^2)dx** no itervalo **[-2,2]**<br>
 Executa o código e chama-se a função **Ponto_Medio(g,-2,2)** no console.<br>
 
 **RESULTADO PONTO MÉDIO**<br>
@@ -128,7 +129,7 @@ Executa o código e chama-se a função **Ponto_Medio(g,-2,2)** no console.<br>
 A seguir utiliza-se o método de Monte Carlo para realizar a Integração de funções com uma ou mais variáveis.
 
 ### Exemplo Integral Simples:<br>
-Deseja-se calcular a Integral ∫(1/2+xe^(-x^2)dx no itervalo **[-2,2]**<br>
+Deseja-se calcular a Integral **∫(1/2+xe^(-x^2)dx** no itervalo **[-2,2]**<br>
 Executa o código e chama-se a função **Integral_Simples(g,-2,2)**<br> 
 Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
@@ -138,7 +139,7 @@ Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 **A Integral Aproximada da Função é: 2.50935770**<br><br>
 
 ### Exemplo Integral Dupla:<br>
-Deseja-se calcular a Integral ∬e(^xy)sin⁡(xy)dxdy sobre a região **β = [0,1,0,1]**<br>
+Deseja-se calcular a Integral **∬e(^xy)sin⁡(xy)dxdy** sobre a região **β = [x0,x1,y0,y1]**<br>
 Executa o código e chama-se a função **Integral_Dupla(g,0,1,0,1)**<br> 
 Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
@@ -149,7 +150,7 @@ Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 **A Integral Aproximada da Função é: 0.38769407**<br><br>
 
 ### Exemplo Integral Tripla:<br>
-Deseja-se calcular a Integral da função ∭sin⁡(xyz)dxdydz **β = [-2,2,-2,2,-0.2,0.3]**<br>
+Deseja-se calcular a Integral da função **∭sin⁡(xyz)dxdydz** **β = [x0,x1,y0,y1,z0,z1]**<br>
 Executa o código e chama-se a função **integral_tripla(g,-2,2,-2,2,-0.2,0.3)**<br> 
 Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
