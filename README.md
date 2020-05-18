@@ -166,7 +166,7 @@ Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 Este método resolve o problema da EDO y' - 2xy = 0 ; y(1) = 1  no intervalo **x = [0,2]**<br>
 Executa o código e chama-se a função **Euler_Method(g,0,2,1)**<br>
 
-**RESULTADO MÉTODO DE EULER**
+**RESULTADO MÉTODO DE EULER**<br>
 ![EDO_Euler](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/EDO_Euler.png)<br>
 
 ### Exemplo Método de Runge Kutta 4° Ordem: <br>
