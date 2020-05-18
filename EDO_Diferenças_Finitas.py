@@ -8,16 +8,16 @@ Created on Tue Jan 28 15:24:18 2020
 # Método das Diferenças Finitas - EDO
 
 """
-Este método calcula a EDO  y'' - 8x³y' + 4sin(x)y = 50cos(x)  para as condições de contorno y(1) = 1 ; y(2) = 1
+Este método calcula a EDO  y" - 8x³y' + 4sin(x)y = 50cos(x)  para as condições de contorno y(1) = 1 ; y(2) = 1
 
-y'' - 8x³y' + 4sin(x)y = 50cos(x)
+y" - 8x³y' + 4sin(x)y = 50cos(x)
 
 y(1) = 1 ; y(2) = 1
 
 """
 import math
 import numpy
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as pyplot
 
 # Funções P(x); Q(x); R(x)
 def P(x):
@@ -35,7 +35,7 @@ def R(x):
 # Método das Diferenças Finitas para EDO de Ordem Superior
 def Diferenças_Finitas(x0,x1,P,Q,R,y0,y1):
 
-    N = 200             # Espaço de X
+    N = 100             # Espaço de X
     h = (x1-x0)/(N)     # Passo da Função
 
     x = numpy.linspace(x0,x1,N)
@@ -92,10 +92,10 @@ def Diferenças_Finitas(x0,x1,P,Q,R,y0,y1):
     X = numpy.linspace(x0,x1,len(solution))
 
     # Gráfico da EDO
-    plt.title("Gráfico da EDO \n y'' - 8x³y' + 4sin(x)y = 50cos(x); y(1) = 1 ; y(2) = 1")
-    plt.xlabel('EIXO X')
-    plt.ylabel('EIXO Y')
-    plt.plot(X,solution, label = 'Solução Númerica', color = 'blue', linestyle = 'dashed')
-    plt.legend()
-    plt.grid()
-    plt.show()
+    pyplot.title("Gráfico da EDO \n y'' - 8x³y' + 4sin(x)y = 50cos(x); y(1) = 1 ; y(2) = 1")
+    pyplot.xlabel('EIXO X')
+    pyplot.ylabel('EIXO Y')
+    pyplot.plot(X,solution, label = 'Solução Númerica', color = 'red', linestyle = 'dashed')
+    pyplot.legend(loc = 'upper left')
+    pyplot.grid()
+    pyplot.show()
