@@ -8,27 +8,16 @@ Created on Sat Sep 28 19:46:18 2019
 # Método Numérico da Bissecção
 
 import numpy
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as pyplot
 
 def g(x):
 
     return(numpy.exp(-3*x)*numpy.sin(4*x))
 
-def bissecção(g,x0,x1):
+def Bissecção(g,x0,x1):
     erro = 0.0000001
     var_count = 1
-
-    #Plotagem do Gráfico de G(x)
-    x = numpy.linspace(x0,x1)
-
-    plt.title('Gráfico de g(x)')
-    plt.xlabel('EIXO X')
-    plt.ylabel('EIXO Y')
-    plt.plot(x,g(x))
-    plt.fill_between(x,g(x))
-    plt.grid()
-    plt.show()
-    
+   
     #Método Numérico da Bissecção
     if(g(x0)*g(x1)<0):
         print("\n")
@@ -49,3 +38,14 @@ def bissecção(g,x0,x1):
     else:
         print("\n") 
         print("Não existe raiz nesse intervalo.")
+
+    #Plotagem do Gráfico de G(x)
+    xt = numpy.linspace(0.80*m,1.20*m)
+
+    pyplot.title('Gráfico de g(x)')
+    pyplot.xlabel('EIXO X')
+    pyplot.ylabel('EIXO Y')
+    pyplot.plot(xt,g(xt), color = "red")
+    pyplot.fill_between(xt,g(xt), color = "gray")
+    pyplot.grid()
+    pyplot.show()
