@@ -20,7 +20,7 @@ y = [0.264,0.840,1.361,1.612,1.366,0.716,0.079]<br>
 Executa o código e chama-se a função **Spline_Cubico(x,y,xp)** em que o parâmetro xp é um ponto qualquer pertencente ao intervalo x.<br>
 Exemplo: **Spline_Cubico(x,y,0.957)**<br>
 
-**RESULTADO INTERPOLAÇÃO DE LAGRANGE**<br>
+**RESULTADO INTERPOLAÇÃO POR SPLINE CUBICO**<br>
 ![Interpolação_Spline_Cubico](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Interpolação_Spline_Cubico.png)
 
 ## Métodos para Raizes de Funções de uma variável:
