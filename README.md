@@ -151,7 +151,7 @@ Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
 ### Exemplo Integral Tripla:<br>
 Deseja-se calcular a Integral da função **∭sin⁡(xyz)dxdydz** **β = [x0,x1,y0,y1,z0,z1]**<br>
-Executa o código e chama-se a função **integral_tripla(g,-2,2,-2,2,-0.2,0.3)**<br> 
+Executa o código e chama-se a função **Integral_Tripla(g,-2,2,-2,2,-0.2,0.3)**<br> 
 Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
 **RESULTADO INTEGRAL ESTOCÁSTICA TRIPLA**<br>
