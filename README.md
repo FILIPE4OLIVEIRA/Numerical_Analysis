@@ -33,7 +33,7 @@ Executa o código e chama-se a função **Bissecção(g,0.5,1.0)** no console.<b
 
 **RESULTADO BISSECÇÃO**
 
-Iteração |Ponto(x0)    |Ponto(x1)    | Módulo g(m)
+Iteração |Ponto(x0)    |Ponto(x1)    | Módulo y(m)
 :-------:|:-----------:|:-----------:|----------
 1        |0.50000000   |1.00000000   |0.01487394
 2        |0.75000000   |1.00000000   |0.02541065
@@ -64,7 +64,7 @@ Executa o código e chama-se a função **Secante(g,0.5,1.0)** no console.<br>
 
 **RESULTADO SECANTE**
 
-Iteração |Ponto(x0)  |Ponto(x1)  |Módulo g(x2)
+Iteração |Ponto(x0)  |Ponto(x1)  |Módulo y(x2)
 ---------|-----------|-----------|------------
 1        |0.50000000 |1.00000000 |0.03265448
 2        |1.00000000 |0.92168833 |0.28897198
@@ -85,7 +85,7 @@ Executa o código e chama-se a função **Newton(y,dydx,0.5)** no console.<br>
 
 **RESULTADO NEWTON**
 
-Iteração |Ponto(x1)  |G(x1)
+Iteração |Ponto(x1)  |y(x1)
 ---------|-----------|----------
 1        |0.70701233 |0.03698312
 2        |0.77221590 |0.00519687
