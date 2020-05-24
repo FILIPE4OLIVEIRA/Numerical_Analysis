@@ -11,7 +11,7 @@ Executa o código e chama-se a função **Lagrange(x,y,xp)** em que o parâmetro
 Exemplo: **Lagrange(x,y,43.76)**<br>
 
 **RESULTADO INTERPOLAÇÃO DE LAGRANGE**<br>
-![Interpolação_Lagrange](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Interpolação_Lagrange.png)
+![Interpolação_Lagrange](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Interpolação_Lagrange_1.png)
 
 ### Exemplo Método de Spline Cúbico:<br>
 Deseja-se interpolar os dados contidos no vetores **x** e **y**.<br>
@@ -21,7 +21,7 @@ Executa o código e chama-se a função **Spline_Cubico(x,y,xp)** em que o parâ
 Exemplo: **Spline_Cubico(x,y,0.957)**<br>
 
 **RESULTADO INTERPOLAÇÃO POR SPLINE CUBICO**<br>
-![Interpolação_Spline_Cubico](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Interpolação_Spline_Cubico.png)
+![Interpolação_Spline_Cubico](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Interpolação_Spline_Cubico_1.png)
 
 ## Métodos para Raizes de Funções de uma variável:
 Os métodos a seguir retornam a raiz de uma função y(x) qualquer definida no início do código,
