@@ -175,10 +175,3 @@ Executa o código e chama-se a função **Runge_Kutta_O4(g,0,2,1)**<br>
 
 **RESULTADO MÉTODO DE RUNGE KUTTA 4° ORDEM**
 ![EDO_RK4](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/EDO_RK4.png)<br>
-
-### Exemplo Método de Diferenças Finitas: <br>
-Este método calcula a EDO  y" - 8x³y' + 4sin(x)y = 50cos(x)  para as condições de contorno y(1) = 1 ; y(2) = 1<br>
-Executa o código e chama-se a função **Diferenças_Finitas(1,2,P,Q,R,1,1)**<br>
-
-**RESULTADO MÉTODO DE DIFERENÇAS FINITAS**
-![EDO_Diferenças Finitas](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/EDO_Diferenças_Finitas.png)<br>
