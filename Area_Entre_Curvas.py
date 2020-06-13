@@ -18,7 +18,7 @@ def g(x):
 
 	return(2*x + 5)
 
-def Area_Functions(f,g,x0=-4,x1=12):
+def Area_Entre_Curvas(f,g,x0=-4,x1=12):
 
 	numb_breaks = 1000
 	SOMA_F1 = 0
