@@ -10,9 +10,9 @@ Created on Mon Jan 16 21:27:18 2020
 import numpy
 from sympy import *
 
-A = numpy.array([[4.0,41.0,78.0],[48.0,28.0,21.0],[26.0,13.0,11.0]]) # Matriz 
+A = numpy.array([[4,-1,1],[-1,3,-2],[1,-2,3]])
 
-def Autovalor(A):
+def AutoValores(A):
 	lenght = len(A[0])
 	y = Symbol('y')
 	M = Matrix(A)
@@ -23,6 +23,6 @@ def Autovalor(A):
 				M[i,j] = M[i,j] - y
 
 	detM = M.det()
-	Eq = str(detM)
-	autovalores = nroots(Eq, n=8)
-	return(print("Autovalores: " ,(autovalores)))
+	Equation = str(detM)
+	AutoValores = nroots(Equation, n=5)
+	return(print("Autovalores: " ,(AutoValores)))
