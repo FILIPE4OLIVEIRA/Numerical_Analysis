@@ -23,7 +23,7 @@ Exemplo: **Spline_Cubico(x,y,0.957)**<br>
 **RESULTADO INTERPOLAÇÃO POR SPLINE CUBICO**<br>
 ![Interpolação_Spline_Cubico](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Interpolação_Spline_Cubico_1.png)
 
-## Métodos para Raizes de Funções de uma variável:
+## Métodos para Raizes de Funções de uma Variável:
 Os métodos a seguir retornam a raiz de uma função y(x) qualquer definida no início do código,
 o código necessita de mais dois argumentos x0 e x1 que definem o intervalo de busca pela raiz.<br>
 
@@ -56,7 +56,7 @@ Iteração |Ponto(x0)    |Ponto(x1)    | Módulo y(m)
 19       |0.78539658   |0.78539848   |0.00000024
 20       |0.78539753   |0.78539848   |0.00000006
 
-**A raiz da função é: 0.78539801**<br><br>
+**A raiz da função é: 0.78539801**<br>
 
 ### Exemplo Método da Secante:<br>
 Deseja-se saber a raiz da função **y(x) = e^(-3x)sin(4x)** no intervalo **[0.5,1.0]**<br>
@@ -76,7 +76,7 @@ Iteração |Ponto(x0)  |Ponto(x1)  |Módulo y(x2)
 8        |0.78823032 |0.78554505 |0.00000048
 9        |0.78554505 |0.78539691 |0.00000000
 
-**A raiz aproximada da função é: 0.78539816**<br><br>
+**A raiz aproximada da função é: 0.78539816**<br>
 
 ### Exemplo Método de Newton:<br>
 Deseja-se saber a raiz da função **y(x) = e^(-3x)sin(4x)** com um chute inicial igual a **0.5**,
@@ -93,7 +93,7 @@ Iteração |Ponto(x1)  |y(x1)
 4        |0.78539744 |0.00000027
 5        |0.78539816 |0.00000000
 
-**A raiz aproximada da função é: 0.78539816**<br><br>
+**A raiz aproximada da função é: 0.78539816**<br>
 
 **Resultado Gráfico das Funções Bissecção, Secante e Newton.**
 ![Zero_Funções](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/graph_zero_g(x).png)<br>
@@ -107,7 +107,7 @@ Executa o código e chama-se a função **Trapezio(g,-2,2)** no console.<br>
 
 **RESULTADO TRAPEZIO**<br>
 ![Trapezio](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Area_Function_Trapezio.png)<br>
-**A Integral Aproximada da Função é: 2.00000000**<br><br>
+**A Integral Aproximada da Função é: 2.00000000**<br>
 
 ### Exemplo Método do (1/3) Simpson Composto:<br>
 Deseja-se saber o valor da integral **∫(1/2+xe^(-x^2)dx** no itervalo **[-2,2]**<br>
@@ -115,7 +115,7 @@ Executa o código e chama-se a função **Simpson(g,-2,2)** no console.<br>
 
 **RESULTADO SIMPSON**<br>
 ![Simpson](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Area_Function_Simpson.png)<br>
-**A Integral Aproximada da Função é: 1.99550328**<br><br>
+**A Integral Aproximada da Função é: 1.99550328**<br>
 
 ### Exemplo Método do Ponto Médio:<br>
 Deseja-se saber o valor da integral **∫(1/2+xe^(-x^2)dx** no itervalo **[-2,2]**<br>
@@ -123,7 +123,16 @@ Executa o código e chama-se a função **Ponto_Medio(g,-2,2)** no console.<br>
 
 **RESULTADO PONTO MÉDIO**<br>
 ![Ponto_Médio](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Area_Function_Ponto_Medio.png)<br>
-**A Integral Aproximada da Função é: 2.00029305**<br><br>
+**A Integral Aproximada da Função é: 2.00029305**<br>
+
+### Área Entre Curvas
+Deseja-se saber a área entre duas curvas definidas por funções.<br>
+Dadas as funções **f(x) = -x² + 18x -17** e **g(x) = 2x + 5** no intervalo **[-4,12]**<br>
+Execulta o código e chama-se a função **Area_Entre_Curvas(f,g,x0,x1)** no console<br>
+
+**RESULTADO ÁREA ENTRE CURVAS**
+![Área_Curvas](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Area_Entre_Curvas.png)<br>
+
 
 ## Método Estocástico de Integração para Funções com Multiplas Variáveis:
 A seguir utiliza-se o método de Monte Carlo para realizar a Integração de funções com uma ou mais variáveis.
@@ -163,14 +172,14 @@ Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 ## Métodos Númericos para Solução de EDOs
 
 ### Exemplo Método de Euler: <br>
-Este método resolve o problema da EDO y' - 2xy = 0 ; y(1) = 1  no intervalo **x = [0,2]**<br>
+Este método resolve o problema da EDO y' - 2xy = 0 ; y(0) = 1  no intervalo **x = [0,2]**<br>
 Executa o código e chama-se a função **Euler_Method(g,0,2,1)**<br>
 
 **RESULTADO MÉTODO DE EULER**<br>
 ![EDO_Euler](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/EDO_Euler.png)<br>
 
 ### Exemplo Método de Runge Kutta 4° Ordem: <br>
-Este método resolve o problema da EDO y' - 2xy = 0 ; y(1) = 1  no intervalo **x = [0,2]**<br>
+Este método resolve o problema da EDO y' - 2xy = 0 ; y(0) = 1  no intervalo **x = [0,2]**<br>
 Executa o código e chama-se a função **Runge_Kutta_O4(g,0,2,1)**<br>
 
 **RESULTADO MÉTODO DE RUNGE KUTTA 4° ORDEM**
