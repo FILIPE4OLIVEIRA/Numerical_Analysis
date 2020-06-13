@@ -130,7 +130,7 @@ Deseja-se saber a área entre duas curvas definidas por funções.<br>
 Dadas as funções **f(x) = -x² + 18x -17** e **g(x) = 2x + 5** no intervalo **[-4,12]**<br>
 Execulta o código e chama-se a função **Area_Entre_Curvas(f,g,x0,x1)** no console<br>
 
-**RESULTADO ÁREA ENTRE CURVAS**
+**RESULTADO ÁREA ENTRE CURVAS**<br>
 ![Área_Curvas](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Area_Entre_Curvas.png)<br>
 
 
