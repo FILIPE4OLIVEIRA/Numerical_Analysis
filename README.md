@@ -184,3 +184,13 @@ Executa o código e chama-se a função **Runge_Kutta_O4(g,0,2,1)**<br>
 
 **RESULTADO MÉTODO DE RUNGE KUTTA 4° ORDEM**
 ![EDO_RK4](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/EDO_RK4.png)<br>
+
+### Exemplo de EDO de Ordem Superior:
+EDO de Ordem Superior são do tipo **y" + P(x)y' + Q(x)y = R(x)**<br>
+Este método resolve o problema da EDO y" - (2/x)y' + (2/x²)y = xln(x) ; y(1) = 1 e y'(1) = 0 no intervalo **x = [1.0,3.7]**<br>
+Executa o código e chama-se a função **Runge_Kutta_O4S(x0,x1,y0,y1,P,Q,R)**<br>
+
+**RESULTADO MÉTODO DE RUNGE KUTTA 4° ORDEM PARA EDO DE ORDEM SUPERIOR**
+![EDO_RK4_OS](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/EDO_RK4_OS.png)<br>
+
+
