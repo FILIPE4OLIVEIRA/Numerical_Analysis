@@ -57,4 +57,4 @@ def Area_Entre_Curvas(f,g,x0=-4,x1=12):
 	pyplot.show()
 
 	print("\n")
-	return(print("\tA Área Aproximada Entre as Funções é: %.8f" %(Area)))
+	return(print("A Área Aproximada Entre às Funções é: %.8f" %(Area)))
