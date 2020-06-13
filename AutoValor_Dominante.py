@@ -29,16 +29,5 @@ def AutoValor_Dominante(A,x0):
 	AutoValor_Aprox.append(AutoValor)
 	AutoVetor_Aprox.append(AutoVetor)
 
-	for V in [x[0] for x in A]:
-		x_Aux = (1/AutoValor_Aprox[0])*V
-		x_New.append(x_Aux)
-
-	V = numpy.array([AutoVetor_Aprox[0]]).T
-	X = numpy.array([x_New])
-
-	M = V.dot(X)
-	
-	B = A - AutoValor_Aprox[0]*M
-
-	print(B)
-
+	print("AutoValor Aproximado: %.8f" %(AutoValor_Aprox[0]))
+	print("AutoVetor Aproximado:", str(list(AutoVetor_Aprox[0])))
