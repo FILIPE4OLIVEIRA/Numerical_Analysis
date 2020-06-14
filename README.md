@@ -167,7 +167,7 @@ Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 ![Integral_Tripla_1](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_1_Tripla.png)<br>
 ![Integral_Tripla_2](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_2_Tripla.png)<br>
 ![Integral_Tripla_2](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_3_Tripla.png)<br>
-**A Integral Aproximada da Função é: -0.00137981**<br><br>
+**A Integral Aproximada da Função é: 0.00009371**<br><br>
 
 ## Métodos Númericos para Solução de EDOs
 
