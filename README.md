@@ -156,7 +156,7 @@ Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 ![Integral_Dupla_1](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_1_Dupla.png)<br>
 ![Integral_Dupla_2](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_2_Dupla.png)<br>
 ![Integral_Dupla_3](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Figure_3_Dupla.png)<br>
-**A Integral Aproximada da Função é: 0.38769407**<br><br>
+**A Integral Aproximada da Função é: 0.38077816**<br><br>
 
 ### Exemplo Integral Tripla:<br>
 Deseja-se calcular a Integral da função **∭sin⁡(xyz)dxdydz** sobre a região **β = [x0,x1,y0,y1,z0,z1]**<br>
