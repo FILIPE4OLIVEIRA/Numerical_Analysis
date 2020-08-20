@@ -12,13 +12,13 @@ import matplotlib.pyplot as pyplot
 
 def y(x):
 
-    return(numpy.exp(-3*x)*numpy.sin(4*x))
+    return(numpy.exp(-3*x)*numpy.sin(4*x)) # função que se deseja calcular o zero
 
 def dydx(x):
-    
-    return(numpy.exp(-3*x)*(4*numpy.cos(4*x)-3*numpy.sin(4*x)))
+    h = 0.001
+    return((y(x+h)-y(x))/h) # derivada numerica da função (não precisa mexer)
  
-def Newton(y,dydx,x0):
+def Newton(y,dydx,x0=0.5):
     erro = 0.0000001
     maxint = 100
     var_count = 1
