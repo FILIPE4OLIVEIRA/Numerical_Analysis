@@ -16,9 +16,10 @@ def y(x):
 
 def dydx(x):
     h = 0.001
-    return((y(x+h)-y(x))/h) # derivada numerica da função (não precisa mexer)
+    dydx = (y(x+h)-y(x))/(h) # derivada numérica da função (não precisa mexer)
+    return(dydx)
  
-def Newton(y,dydx,x0=0.5):
+def Newton_Raphson(y,dydx=dydx,x0=0.5):
     erro = 0.0000001
     maxint = 100
     var_count = 1
