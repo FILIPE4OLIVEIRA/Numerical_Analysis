@@ -79,11 +79,10 @@ Iteração |Ponto(x0)  |Ponto(x1)  |Módulo y(x2)
 **A raiz aproximada da função é: 0.78539816**<br>
 
 ### Exemplo Método de Newton:<br>
-Deseja-se saber a raiz da função **y(x) = e^(-3x)sin(4x)** com um chute inicial igual a **0.5**,
-neste método é necessário adicionar a função **y'(x)**<br>
-Executa o código e chama-se a função **Newton(y,dydx,0.5)** no console.<br>
+Deseja-se saber a raiz da função **y(x) = e^(-3x)sin(4x)** com um chute inicial igual a **0.5**<br>
+Executa o código e chama-se a função **Newton_Raphson(y,dydx,0.5)** no console.<br>
 
-**RESULTADO NEWTON**
+**RESULTADO NEWTON RAPHSON**
 
 Iteração |Ponto(x1)  |y(x1)
 ---------|-----------|----------
