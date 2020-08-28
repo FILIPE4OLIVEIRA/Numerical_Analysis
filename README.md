@@ -101,7 +101,7 @@ Iteração |Ponto(x1)  |y(x1)
 Os métodos a seguir realizam a integração de uma função g(x) em um intervalo [x0,x1] qualquer.<br>
 
 ### Exemplo Método do (1/2) Trapezio Composto:<br>
-Deseja-se saber o valor da integral **∫(1/2 + xe^(-x²)dx** no itervalo **[-2,2]**<br>
+Deseja-se saber o valor da integral **∫(1/2 + 3xe^(-x²)dx** no itervalo **[-2,2]**<br>
 Executa o código e chama-se a função **Trapezio(g,-2,2)** no console.<br>
 
 **RESULTADO TRAPEZIO**<br>
@@ -109,7 +109,7 @@ Executa o código e chama-se a função **Trapezio(g,-2,2)** no console.<br>
 **A Integral Aproximada da Função é: 2.00000000**<br>
 
 ### Exemplo Método do (1/3) Simpson Composto:<br>
-Deseja-se saber o valor da integral **∫(1/2 + xe^(-x²)dx** no itervalo **[-2,2]**<br>
+Deseja-se saber o valor da integral **∫(1/2 + 3xe^(-x²)dx** no itervalo **[-2,2]**<br>
 Executa o código e chama-se a função **Simpson(g,-2,2)** no console.<br>
 
 **RESULTADO SIMPSON**<br>
@@ -117,7 +117,7 @@ Executa o código e chama-se a função **Simpson(g,-2,2)** no console.<br>
 **A Integral Aproximada da Função é: 1.99550328**<br>
 
 ### Exemplo Método do Ponto Médio:<br>
-Deseja-se saber o valor da integral **∫(1/2 + xe^(-x²)dx** no itervalo **[-2,2]**<br>
+Deseja-se saber o valor da integral **∫(1/2 + 3xe^(-x²)dx** no itervalo **[-2,2]**<br>
 Executa o código e chama-se a função **Ponto_Medio(g,-2,2)** no console.<br>
 
 **RESULTADO PONTO MÉDIO**<br>
@@ -137,7 +137,7 @@ Execulta o código e chama-se a função **Area_Entre_Curvas(f,g,x0,x1)** no con
 A seguir utiliza-se o método de Monte Carlo para realizar a Integração de funções com uma ou mais variáveis.
 
 ### Exemplo Integral Simples:<br>
-Deseja-se calcular a Integral **∫(1/2 + xe^(-x²)dx** no itervalo **[-2,2]**<br>
+Deseja-se calcular a Integral **∫(1/2 + 3xe^(-x²)dx** no itervalo **[-2,2]**<br>
 Executa o código e chama-se a função **Integral_Simples(g,-2,2)**<br> 
 Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
