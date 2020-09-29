@@ -14,7 +14,9 @@ matrix = numpy.array([[3.0,-0.1,-0.2],[0.1,7.0,-0.3],[0.3,-0.2,10.0]]).<br>
 vec_b = numpy.array([7.85,-19.3,71.4]).<br>
 
 Chama-se a Função **Gauss_Sidel(matrix,vec_b)**.<br> 
-Onde os parâmetros são a matriz dos coeficiantes o vetor alvo e o numero maximo de iterações.<br>
+Onde os parâmetros são a matriz dos coeficiantes o vetor alvo.<br>
+Existe também um número maximo de iterações como terceiro parâmetro, mas este por padrão é igual a 100.<br>
+Para altera-lo use a função da seguinte maneira **Gauss_Sidel(matrix,vec_b,max_int=10)** alterando-o assim para 10.<br>
 
 **RESULTADO**.<br>
 Número de Iterações: 8.<br>
@@ -27,7 +29,9 @@ Dado o Sistema Não Linear.<br>
 ![Sistema_Não_Linear](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Sistema_Não_Linear.png).<br>
 
 Chama-se a Função NLS_Broyden(x0).<br>
-Onde os parâmetros são **x0** que é um chute inicial.<br> 
+Onde os parâmetros são **x0** que é um chute inicial.<br>
+Existe também um número maximo de iterações como segundo parâmetro, mas este por padrão é igual a 100.<br>
+Para altera-lo use a função da seguinte maneira **NLS_Broyden(x0,h=0.001,max_int=10)** alterando-o assim para 10.<br>
 
 **RESULTADO**.<br>
 Número de Iterações: 3.<br>
