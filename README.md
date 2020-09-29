@@ -1,6 +1,38 @@
 # Numerical_Analysis
 Este é um repositório com métodos numéricos simples para iniciantes em programação Python e Cálculo Numérico.
 
+## Métodos Numéricos para Sistemas Lineares e Não Lineares:
+
+### Exemplo Método de Gauss-Sidel para Sistemas Lineares:.<br>
+
+Dado o Sistema Linear -- **ATENÇÃO AOS PRESSUPOSTOS DO MÉTODO DE GAUSS-SIDEL**.<br>
+
+![Sistema_Linear](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Sistema_Linear.png).<br>
+
+Monta-se a matriz dos coeficientes e o vetor alvo da seguinte forma:.<br>
+matrix = numpy.array([[3.0,-0.1,-0.2],[0.1,7.0,-0.3],[0.3,-0.2,10.0]]).<br>
+vec_b = numpy.array([7.85,-19.3,71.4]).<br>
+
+Chama-se a Função **Gauss_Sidel(matrix,vec_b)**.<br> 
+Onde os parâmetros são a matriz dos coeficiantes o vetor alvo e o numero maximo de iterações.<br>
+
+**RESULTADO**.<br>
+Número de Iterações: 8.<br>
+Solução do Sistema Linear: [3.0, -2.5, 7.0].<br>
+
+### Exemplo Método de Broyden para Sistemas Não Lineares:
+
+Dado o Sistema Não Linear.<br>
+
+![Sistema_Não_Linear](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Sistema_Não_Linear.png).<br>
+
+Chama-se a Função NLS_Broyden(x0).<br>
+Onde os parâmetros são **x0** que é um chute inicial.<br> 
+
+**RESULTADO**.<br>
+Número de Iterações: 3.<br>
+Solução do Sistema Não Linear:  [0.5000001004, 1.26946e-05, -0.5235984447].<br>
+
 ## Métodos de Interpolação de Dados:
 
 ### Exemplo Método de Lagrange:<br>
