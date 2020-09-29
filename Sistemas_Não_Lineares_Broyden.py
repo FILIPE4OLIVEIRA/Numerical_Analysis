@@ -34,7 +34,7 @@ def Non_Linear_System(x0):
     return(System_Value)
 
 # Calculo da Matriz Jacobiana do Sistema Não Linear
-def System_Jacobiano(x0,h=0.001):
+def Jacobiano(x0,h=0.001):
     
     x1,x2,x3 = x0[0], x0[1], x0[2]
     
@@ -51,13 +51,13 @@ def System_Jacobiano(x0,h=0.001):
     dG3dx3 = (G3(x1,x2,x3+h) - G3(x1,x2,x3))/h
     
     Matrix = numpy.array([[dG1dx1,dG1dx2,dG1dx3],
-                          [dG2dx1,dG2dx2,dG1dx3],
+                          [dG2dx1,dG2dx2,dG2dx3],
                           [dG3dx1,dG3dx2,dG3dx3]])
     
     return(Matrix)    
 
 # Método de Broyden para Sistemas Não Lineares
-def NLS_Broyden(x0,h=0.001,max_int=100):
+def Broyden_Method(x0,h=0.001,max_int=100):
     
     System_Value = Non_Linear_System(x0)
     System_Value = list(abs(i) for i in System_Value)
@@ -66,21 +66,21 @@ def NLS_Broyden(x0,h=0.001,max_int=100):
     var_count = 0
     while(System_Value > erro_alvo and var_count < max_int):
 
-        F_x0 = numpy.array(Non_Linear_System(x0))
+    	F_x0 = numpy.array(Non_Linear_System(x0))
+    	A0 = Jacobiano(x0,h)
+    	Inv_A0 = inverse(A0) # Inversa da Matriz Jacobiana
+    	x1 = x0 - Inv_A0@F_x0
+    	F_x1 = numpy.array(Non_Linear_System(x1))
+    	y1 = F_x1 - F_x0
+    	s1 = x1 - x0
+    	c1 = (s1@Inv_A0)@y1
+    	Inv_A1 = Inv_A0 + (1/c1)*((s1-Inv_A0@y1)*(s1@Inv_A0))
+    	x2 = x1 - Inv_A1@F_x1
+    	x0 = x2
 
-        Jacobi = System_Jacobiano(x0,h)
-
-        Inverse_Jacobi = inverse(Jacobi) # Inversa da Matriz Jacobiana
-
-        x1 = x0 - Inverse_Jacobi@F_x0
-
-        x0 = x1
-        
-        System_Value = Non_Linear_System(x0)
-    
-        System_Value = list(abs(i) for i in System_Value)
-        
-        var_count = var_count + 1
+    	System_Value = Non_Linear_System(x0)
+    	System_Value = list(abs(i) for i in System_Value)
+    	var_count = var_count + 1
    
     xn = list(round(i,10) for i in x0)
     
