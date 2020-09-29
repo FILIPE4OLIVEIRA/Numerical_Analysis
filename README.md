@@ -28,10 +28,10 @@ Dado o Sistema Não Linear.<br>
 
 ![Sistema_Não_Linear](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/Sistema_Não_Linear.png).<br>
 
-Chama-se a Função NLS_Broyden(x0).<br>
+Chama-se a Função **Broyden_Method(x0)**.<br>
 Onde os parâmetros são **x0** que é um chute inicial.<br>
 Existe também um número maximo de iterações como segundo parâmetro, mas este por padrão é igual a 100.<br>
-Para altera-lo use a função da seguinte maneira **NLS_Broyden(x0,h=0.001,max_int=10)** alterando-o assim para 10.<br>
+Para altera-lo use a função da seguinte maneira **Broyden_Method(x0,h=0.001,max_int=10)** alterando-o assim para 10.<br>
 
 **RESULTADO Método de Broyden**.<br>
 Número de Iterações: 3.<br>
