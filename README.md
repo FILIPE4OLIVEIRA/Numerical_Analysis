@@ -18,7 +18,7 @@ Onde os parâmetros são a matriz dos coeficiantes o vetor alvo.<br>
 Existe também um número maximo de iterações como terceiro parâmetro, mas este por padrão é igual a 100.<br>
 Para altera-lo use a função da seguinte maneira **Gauss_Sidel(matrix,vec_b,max_int=10)** alterando-o assim para 10.<br>
 
-**RESULTADO**.<br>
+**RESULTADO Método de Gauss-Sidel**.<br>
 Número de Iterações: 8.<br>
 Solução do Sistema Linear: [3.0, -2.5, 7.0].<br>
 
@@ -33,7 +33,7 @@ Onde os parâmetros são **x0** que é um chute inicial.<br>
 Existe também um número maximo de iterações como segundo parâmetro, mas este por padrão é igual a 100.<br>
 Para altera-lo use a função da seguinte maneira **NLS_Broyden(x0,h=0.001,max_int=10)** alterando-o assim para 10.<br>
 
-**RESULTADO**.<br>
+**RESULTADO Método de Broyden**.<br>
 Número de Iterações: 3.<br>
 Solução do Sistema Não Linear:  [0.5000001004, 1.26946e-05, -0.5235984447].<br>
 
