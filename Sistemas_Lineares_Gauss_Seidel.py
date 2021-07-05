@@ -9,8 +9,8 @@ Created on Wed Jan  1 20:30:37 2020
 
 import numpy
 
-A = numpy.array([[8,2,-1,0],[2,-4,0,0],[0,-2,8,-1],[0,0,-1,4]])
-b = numpy.array([1,1,1,1])
+A = numpy.array([[8.,2.,-1.,0],[2.,-4.,0.,0.],[0.,-2.,8.,-1.],[0.,0.,-1.,4.]])
+b = numpy.array([1.,1.,1.,1.])
 
 def Sassenfeld(A,b):
  	coef = list(numpy.ones(len(b)))
@@ -67,3 +67,6 @@ def Gauss_Sidel(A,b,max_int=100):
 		print("Método Não Converge.")
 
 	return(solution,iterations)
+
+
+S = Gauss_Sidel(A,b)
