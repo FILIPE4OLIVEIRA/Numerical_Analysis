@@ -5,6 +5,7 @@ Created on Wed Jan  1 18:49:35 2020
 
 """
 # EDO: y' + P(x)y = 0
+
 # Este método resolve o problema da EDO y' - 2xy = 0 ; y(0) = 1  
 
 # Método de Euler - EDO
@@ -18,15 +19,14 @@ def P(x,y):
 	return (2*x*y)
 
 # Método de Euler
-def Euler_Method(P,x0,x1,y0):
+def Euler_Method(x0,y0,x1,N=50000):
 
-	numb_div = 500000
-	h = (x1-x0)/numb_div
+	h = (x1-x0)/N
 
 	x_aprox = [x0]
 	y_aprox = [y0]
 
-	for i in range(numb_div):
+	for i in range(N):
 
 		y_next = y_aprox[i] + h*P(x_aprox[i],y_aprox[i])
 		x_next = x_aprox[i] + h
