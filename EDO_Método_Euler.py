@@ -19,7 +19,7 @@ def P(x,y):
 	return (2*x*y)
 
 # Método de Euler
-def Euler_Method(x0,y0,x1,N=50000):
+def Euler_Method(x0,x1,y0,N=50000):
 
 	h = (x1-x0)/N
 
