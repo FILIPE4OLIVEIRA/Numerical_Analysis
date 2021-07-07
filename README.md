@@ -220,12 +220,22 @@ Executa o código e chama-se a função **Runge_Kutta_O4(0,2,1)**<br>
 **RESULTADO MÉTODO DE RUNGE KUTTA 4° ORDEM**
 ![EDO_RK4](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/EDO_RK4.png)<br>
 
-### Exemplo de EDO de Ordem Superior:
+### Exemplo Método de Runge Kutta 4° Ordem - EDO de Ordem Superior:
 EDO de Ordem Superior são do tipo **y" + P(x)y' + Q(x)y = R(x)**<br>
 Este método resolve o problema da EDO **y" - 2y' + 2y = sin(x)e^(2x)** ; **y(0) = -0.4** e **y'(0) = -0.6** no intervalo **x = [0,1]**<br>
 Executa o código e chama-se a função **Runge_Kutta_O4S(0,1,-0.4,-0.6)**<br>
 
 **RESULTADO MÉTODO DE RUNGE KUTTA 4° ORDEM PARA EDO DE ORDEM SUPERIOR**
 ![EDO_RK4_OS](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/EDO_RK4_OS.png)<br>
+
+### Exemplo Método Diferenças Finitas Lineares - EDO de Ordem Superior:
+EDO de Ordem Superior são do tipo **y" + P(x)y' + Q(x)y = R(x)**<br>
+Este método resolve o problema da EDO **y" + 2xy' + 3xy = cos(x)** ; **y(0) = 1** e **y(1) = 2** no intervalo **x = [0,1]**<br>
+Importante ressaltar que os valores da função **y(x)** são conhecidos nos extremos, mas não se sabe os valores de **y'(x)**<br>
+Executa o código e chama-se a função **Diferença_Finita_Linear(0,1,1,2)**<br>
+
+**RESULTADO MÉTODO DIFERANÇAS FINITAS PARA EDO DE ORDEM SUPERIOR**
+![EDO_DIFF_OS](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/EDO_Diferenças_Finitas.png)<br>
+
 
 
