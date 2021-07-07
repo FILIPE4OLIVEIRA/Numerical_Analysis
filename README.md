@@ -208,22 +208,22 @@ Por padrão serão sorteados 1000 números aleatórios e 15000 simulações.<br>
 
 ### Exemplo Método de Euler: <br>
 Este método resolve o problema da EDO **y' - 2xy = 0** ; **y(0) = 1**  no intervalo **x = [0,2]**<br>
-Executa o código e chama-se a função **Euler_Method(g,0,2,1)**<br>
+Executa o código e chama-se a função **Euler_Method(0,2,1)**<br>
 
 **RESULTADO MÉTODO DE EULER**<br>
 ![EDO_Euler](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/EDO_Euler.png)<br>
 
 ### Exemplo Método de Runge Kutta 4° Ordem: <br>
 Este método resolve o problema da EDO **y' - 2xy = 0** ; **y(0) = 1**  no intervalo **x = [0,2]**<br>
-Executa o código e chama-se a função **Runge_Kutta_O4(g,0,2,1)**<br>
+Executa o código e chama-se a função **Runge_Kutta_O4(0,2,1)**<br>
 
 **RESULTADO MÉTODO DE RUNGE KUTTA 4° ORDEM**
 ![EDO_RK4](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/EDO_RK4.png)<br>
 
 ### Exemplo de EDO de Ordem Superior:
 EDO de Ordem Superior são do tipo **y" + P(x)y' + Q(x)y = R(x)**<br>
-Este método resolve o problema da EDO **y" - (2/x)y' + (2/x²)y = xln(x)** ; **y(1) = 1** e **y'(1) = 0** no intervalo **x = [1.0,3.7]**<br>
-Executa o código e chama-se a função **Runge_Kutta_O4S(x0,x1,y0,y1,P,Q,R)**<br>
+Este método resolve o problema da EDO **y" - 2y' + 2y = sin(x)e^(2x)** ; **y(0) = -0.4** e **y'(0) = -0.6** no intervalo **x = [0,1]**<br>
+Executa o código e chama-se a função **Runge_Kutta_O4S(0,1,-0.4,-0.6)**<br>
 
 **RESULTADO MÉTODO DE RUNGE KUTTA 4° ORDEM PARA EDO DE ORDEM SUPERIOR**
 ![EDO_RK4_OS](https://github.com/FILIPE4OLIVEIRA/FILIPE4REPOSITORY/blob/master/Imagens/EDO_RK4_OS.png)<br>
