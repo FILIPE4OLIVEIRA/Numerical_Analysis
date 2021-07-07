@@ -4,9 +4,9 @@ Created on Wed Jan  1 18:49:35 2020
 @author: engoliveira
 
 """
-# EDO: y' + P(x)y = 0
+# EDO: y' = P(x)y
 
-# Este método resolve o problema da EDO y' - 2xy = 0 ; y(0) = 1  
+# Este método resolve o problema da EDO y' = 2xy ; y(0) = 1  
 
 # Método de Euler - EDO
 
